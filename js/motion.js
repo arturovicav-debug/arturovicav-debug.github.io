@@ -222,34 +222,6 @@ function rescan() {
   catch (err) { root.classList.remove("m"); if (window.console) console.error("[motion]", err); }
 }
 
-/* ================= 4. vista previa del índice ================= */
-const pv = $("#pv"), pvi = pv && $("img", pv);
-if (pv && pvi && fine && canAnim) {
-  let on = false, src = "", mx = 0, my = 0, sx = 0, sy = 0, lraf = 0, fresh = false;
-  new MutationObserver(() => {
-    const o = pv.classList.contains("on"), s = pvi.getAttribute("src") || "";
-    if (o && !on) { fresh = true; pv.style.translate = ""; } /* al aparecer no arrastra el retraso de antes */
-    if (o && (!on || s !== src) && root.classList.contains("m")) {
-      pv.animate([{ clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)" }], { duration: 380, easing: CUT });
-      pvi.animate([{ scale: "1.14" }, { scale: "1" }], { duration: 760, easing: EASE });
-    }
-    on = o; src = s;
-  }).observe(pv, { attributes: true, subtree: true, attributeFilter: ["class", "src"] });
-  /* un poco de inercia: la imagen va detrás del puntero (index.html la sigue colocando con transform) */
-  const lag = () => {
-    lraf = 0;
-    sx += (mx - sx) * .14; sy += (my - sy) * .14;
-    const dx = clamp(sx - mx, -40, 40), dy = clamp(sy - my, -24, 24);
-    pv.style.translate = dx.toFixed(1) + "px " + dy.toFixed(1) + "px";
-    if (Math.abs(sx - mx) + Math.abs(sy - my) > .4) lraf = requestAnimationFrame(lag);
-  };
-  doc.addEventListener("pointermove", e => {
-    mx = e.clientX; my = e.clientY;
-    if (fresh) { sx = mx; sy = my; fresh = false; }
-    if (on && !lraf && root.classList.contains("m")) lraf = requestAnimationFrame(lag);
-  }, { passive: true });
-}
-
 /* ================= 5. botones magnéticos (puntero fino) ================= */
 if (fine) {
   const live = new Set();

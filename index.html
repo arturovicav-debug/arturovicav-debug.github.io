@@ -305,10 +305,6 @@ main{overflow-x:clip;display:block;padding-top:calc(var(--head) + env(safe-area-
   .item:hover .t,.item:focus-visible .t{font-stretch:96%}
 }
 .item:focus-visible{background:var(--ig);color:var(--ii);outline-offset:-3px}
-.pv{position:fixed;left:0;top:0;z-index:40;width:clamp(180px,17vw,280px);pointer-events:none;opacity:0;transform:translate3d(-999px,0,0)}
-.pv.on{opacity:1}
-.pv img{display:block;width:100%;height:auto;object-fit:contain}
-@media (hover:none),(pointer:coarse){.pv{display:none}}
 .empty{padding:24px 0}
 
 /* PROYECTO */
@@ -533,7 +529,6 @@ html.has-cur,html.has-cur *{cursor:none!important}
   </div>
 </footer>
 <div class="gridov" id="gridov" hidden aria-hidden="true"><div class="g" id="gridcols"></div></div>
-<div class="pv" id="pv" aria-hidden="true"><img alt=""></div>
 <div class="cur" id="cur" aria-hidden="true"><i></i><b></b></div>
 
 <script src="data.js"></script>
@@ -654,7 +649,7 @@ function work() {
     </div>
     <p class="sr" aria-live="polite" id="fmsg"></p>
     <ol class="list" id="list">
-      ${P.map(p => `<li data-f="${p.filters.join(" ")}"><a class="item" href="#${p.slug}" data-link data-cover="${p.slug}" data-pv="${p.cover}" data-cursor="Ver" style="--ig:${p.color.ground};--ii:${p.color.ink}">
+      ${P.map(p => `<li data-f="${p.filters.join(" ")}"><a class="item" href="#${p.slug}" data-link data-cover="${p.slug}" data-cursor="Ver" style="--ig:${p.color.ground};--ii:${p.color.ink}">
         <span class="n meta">${p.n2}</span><span class="t">${esc(p.title)}</span>
         <span class="th">${img(p.cover, { sizes: "90px", alt: "", style: "object-fit:contain" })}</span>
         <span class="k meta">${esc(p.kind)}</span><span class="y meta">${p.year}</span></a></li>`).join("")}
@@ -925,12 +920,6 @@ function bind(r) {
     };
     $$(".fbtn").forEach(b => b.addEventListener("click", () => apply(b.dataset.f)));
     apply(store.get("filter", "todo"));
-    const pv = $("#pv"), pvi = pv.querySelector("img");
-    if (fine) $$(".item").forEach(row => {
-      row.addEventListener("pointerenter", () => { const k = row.dataset.pv, m = IM[k]; pvi.src = `img/${k}-720.webp`; pvi.style.background = m.edge || m.bg; pvi.style.aspectRatio = m.w + " / " + m.h; pv.style.width = Math.round(Math.min(Math.max(180, Math.min(innerWidth * .17, 280)), innerHeight * .5 * m.w / m.h)) + "px"; pv.classList.add("on"); });
-      row.addEventListener("pointerleave", () => pv.classList.remove("on"));
-      row.addEventListener("pointermove", e => { const w = pv.offsetWidth, h = pv.offsetHeight; let x = e.clientX + 30, y = e.clientY - h / 2; if (x + w > innerWidth - 12) x = e.clientX - w - 30; y = Math.max(64, Math.min(innerHeight - h - 12, y)); pv.style.transform = `translate3d(${x}px,${y}px,0)`; });
-    });
   }
 }
 

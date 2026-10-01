@@ -67,9 +67,6 @@ html.m::view-transition-old(root){animation:none;mix-blend-mode:normal}
 html.m::view-transition-new(root){animation:m-vt 300ms var(--cut) both;mix-blend-mode:normal}
 html.m::view-transition-group(cover){animation-duration:460ms}
 
-/* ---------- 4. vista previa del índice ---------- */
-html.m .pv{overflow:hidden}
-
 /* ---------- 5. botones: el relleno entra de izquierda a derecha y el texto se invierte justo donde pasa ---------- */
 html.m .cta{background-color:transparent;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:100% 0;background-size:0% 100%;transition:background-size 460ms var(--cut)}
 html.m .cta:is(:hover,:focus-visible,[data-state="ok"]){background-color:transparent;background-position:0 0;background-size:100% 100%}
