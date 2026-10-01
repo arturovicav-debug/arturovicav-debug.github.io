@@ -1,0 +1,157 @@
+/* SALA — primera impresión (agente A): cola de arranque, entrada de la portada, proyector y logo.
+   Solo se anima transform, opacity, clip-path y font-stretch. Todo lo que se oculta depende de una clase
+   que pone el JS (html.intro-pending / html.hero-pending / .hx-go / .lead / .pj-on): sin JS, todo se ve. */
+
+/* ---------- 0. Tapa desde el primer pintado (la pone intro-gate.js) ---------- */
+html.intro-pending::before{content:"";position:fixed;inset:0;z-index:85;background:#0B0B0A}
+
+/* ---------- 1. Cola de arranque ---------- */
+.lead{
+  --in:140ms; --cnt:400ms; --out:460ms; --tint:rgba(243,242,238,.1);
+  --dd:min(68vmin,620px);
+  position:fixed;inset:0;z-index:85;background:var(--night);color:var(--screen);
+  overflow:hidden;contain:layout paint;-webkit-user-select:none;user-select:none;cursor:default
+}
+.lead-film{position:absolute;inset:0}
+/* cruz de la mira */
+.lead-h,.lead-v{position:absolute;display:block;background:var(--line)}
+.lead-h{left:0;right:0;top:50%;height:1px;margin-top:-.5px;transform-origin:0 50%;transform:scaleX(0)}
+.lead-v{top:0;bottom:0;left:50%;width:1px;margin-left:-.5px}
+/* esfera */
+.lead-dial{position:absolute;left:50%;top:50%;width:var(--dd);height:var(--dd);margin:calc(var(--dd) / -2) 0 0 calc(var(--dd) / -2)}
+.lead-ring{position:absolute;inset:0;display:block;border-radius:50%;box-shadow:inset 0 0 0 2px rgba(243,242,238,.6)}
+.lead-ring2{inset:11%;box-shadow:inset 0 0 0 1px rgba(243,242,238,.32)}
+/* barrido radial: dos medios discos que giran dentro de dos mitades recortadas (solo transform) */
+.lead-half{position:absolute;top:0;bottom:0;width:50%;overflow:hidden}
+.lead-r{left:50%}.lead-l{left:0}
+.lead-half i{position:absolute;top:0;display:block;width:200%;height:100%;border-radius:50%;will-change:transform}
+.lead-r i{left:-100%;background:linear-gradient(90deg,var(--tint) 50%,transparent 50%)}
+.lead-l i{left:0;background:linear-gradient(90deg,transparent 50%,var(--tint) 50%)}
+.lead-hand{position:absolute;left:50%;top:0;display:block;width:2px;height:50%;margin-left:-1px;background:var(--screen);transform-origin:50% 100%;opacity:0}
+/* números */
+.lead-n{position:absolute;left:-50%;right:-50%;top:50%;display:block;text-align:center;
+  font:900 calc(var(--dd) * .6)/1 var(--f-disp);font-stretch:50%;letter-spacing:0;
+  transform:translateY(-50%);margin-top:.035em;opacity:0;font-variant-numeric:tabular-nums}
+/* filas de créditos */
+.lead-row{position:absolute;left:0;right:0;display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding:0 var(--mar);
+  font:400 var(--t-meta)/1.45 var(--f-mono);letter-spacing:.03em;text-transform:uppercase;font-variant-numeric:tabular-nums;opacity:0}
+.lead-top{top:calc(env(safe-area-inset-top,0px) + 16px)}
+.lead-bot{bottom:calc(env(safe-area-inset-bottom,0px) + 18px);padding-right:calc(var(--mar) + 150px)}
+.lead-row span{display:block}
+.lead-row b{font-weight:500}
+/* cortinilla de salida: hoja del obturador que barre en horizontal */
+.lead-blade{position:absolute;inset:0;display:block;box-shadow:inset 2px 0 0 var(--screen);transform:translateX(0);opacity:0;pointer-events:none}
+/* botón visible y accesible */
+.lead-skip{position:absolute;right:var(--mar);bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:2;
+  display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:10px 12px;
+  font:500 var(--t-meta)/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--screen);
+  border:1.5px solid currentColor;background:var(--night);transition:background-color var(--d1),color var(--d1)}
+.lead-skip:hover{background:var(--screen);color:var(--night)}
+.lead-skip:focus-visible{outline:3px solid var(--screen);outline-offset:3px}
+
+/* en marcha */
+.lead.is-run .lead-h{animation:lead-draw 520ms var(--cut) both}
+.lead.is-run .lead-hand{opacity:1;animation:lead-spin var(--cnt) linear var(--in) 3 both}
+.lead.is-run .lead-r i{animation:lead-sr var(--cnt) linear var(--in) 3 both}
+.lead.is-run .lead-l i{animation:lead-sl var(--cnt) linear var(--in) 3 both}
+.lead.is-run .lead-n{animation:lead-num var(--cnt) var(--ease) var(--in) none}
+.lead.is-run .lead-n2{animation-delay:calc(var(--in) + var(--cnt))}
+.lead.is-run .lead-n3{animation-delay:calc(var(--in) + var(--cnt) * 2)}
+.lead.is-run .lead-row{opacity:1}
+.lead.is-run .lead-row span{animation:lead-tick 320ms steps(10,end) both}
+.lead.is-run .lead-top span+span{animation-delay:60ms}
+.lead.is-run .lead-bot span{animation-delay:120ms}
+/* salida: corte seco en horizontal; la portada aparece detrás */
+.lead.is-out{animation:lead-out var(--out) var(--cut) forwards;pointer-events:auto}
+.lead.is-out .lead-blade{opacity:1;animation:lead-blade var(--out) var(--cut) forwards}
+.lead.is-out .lead-skip{visibility:hidden}
+
+@keyframes lead-draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes lead-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes lead-sr{0%{transform:rotate(0deg)}50%,100%{transform:rotate(180deg)}}
+@keyframes lead-sl{0%,50%{transform:rotate(0deg)}100%{transform:rotate(180deg)}}
+@keyframes lead-num{from{opacity:1;font-stretch:50%}to{opacity:1;font-stretch:122%}}
+@keyframes lead-tick{from{clip-path:inset(-20% 100% -20% 0)}to{clip-path:inset(-20% 0 -20% 0)}}
+@keyframes lead-out{from{clip-path:inset(0 0 0 0)}to{clip-path:inset(0 0 0 100%)}}
+@keyframes lead-blade{from{transform:translateX(0)}to{transform:translateX(100%)}}
+
+@media (max-width:699px){
+  .lead{--dd:min(76vmin,620px)}
+  .lead-bot{padding-right:calc(var(--mar) + 136px)}
+}
+
+/* ---------- 2. Entrada de la portada ---------- */
+/* estado previo (solo mientras html.hero-pending, que pone la puerta y quita intro.js) */
+html.hero-pending .hero .stmt .fitbox{clip-path:inset(-30% 100% -30% 0)}
+html.hero-pending .hero .hero-top>*,
+html.hero-pending .hero .proj .aside{clip-path:inset(-20% 100% -20% 0)}
+html.hero-pending .hero .proj .frame{clip-path:inset(0 100% 0 0)}
+html.hero-pending .hero .hero-sub>*{clip-path:inset(-10% 100% -10% 0)}
+
+/* animación: cada pieza entra de izquierda a derecha, con desfase */
+.hero.hx-go .stmt .fitbox{animation:hx-line 720ms var(--cut) both}
+.hero.hx-go .stmt .fitbox:nth-child(2){animation-delay:90ms}
+.hero.hx-go .stmt .fitbox:nth-child(3){animation-delay:180ms}
+.hero.hx-go .hero-top>*{animation:hx-tick 360ms steps(12,end) both}
+.hero.hx-go .hero-top>*:nth-child(2){animation-delay:80ms}
+.hero.hx-go .hero-top>*:nth-child(3){animation-delay:160ms}
+.hero.hx-go .proj .frame{animation:hx-wipe 820ms var(--cut) 120ms both}
+.hero.hx-go .proj .aside{animation:hx-tick 360ms steps(12,end) 420ms both}
+.hero.hx-go .hero-sub>*{animation:hx-sub 720ms var(--cut) 380ms both}
+.hero.hx-go .hero-sub>*:nth-child(2){animation-delay:470ms}
+
+@keyframes hx-line{from{clip-path:inset(-30% 100% -30% 0)}to{clip-path:inset(-30% 0 -30% 0)}}
+@keyframes hx-tick{from{clip-path:inset(-20% 100% -20% 0)}to{clip-path:inset(-20% 0 -20% 0)}}
+@keyframes hx-wipe{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes hx-sub{from{clip-path:inset(-10% 100% -10% 0)}to{clip-path:inset(-10% 0 -10% 0)}}
+
+/* ---------- 3. Proyector: grano, vaivén de ventanilla, destello, marca de cambio de rollo y progreso ---------- */
+.pj-fx{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.pj-fx i,.pj-bar{position:absolute;display:block;pointer-events:none}
+.pj-grain{inset:-40%;opacity:.15;mix-blend-mode:overlay;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='3 0 0 0 -1 3 0 0 0 -1 3 0 0 0 -1 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E") 0 0/220px 220px;
+  will-change:transform}
+.pj-flash{inset:0;background:var(--screen);opacity:0}
+/* la esquina superior queda bajo el titular en modo diferencia: la marca baja lo que este solapa */
+.pj-cue{top:calc(clamp(40px,9vw,120px) + 14px);right:4.5%;width:clamp(10px,2%,20px);aspect-ratio:1;border-radius:50%;background:#fff;mix-blend-mode:difference;opacity:0}
+.pj-bar{left:0;right:0;bottom:0;height:2px;background:var(--screen);transform-origin:0 50%;transform:scaleX(0)}
+
+@media (prefers-reduced-motion:no-preference){
+  .pj-on>img{transform:scale(1.012);animation:pj-weave 3.4s ease-in-out infinite}
+  .pj-grain{animation:pj-grain 1s steps(1,end) infinite}
+  .pj-on .pj-bar{animation:pj-bar-a 3s linear both}
+  .pj-on.pj-b .pj-bar{animation-name:pj-bar-b}
+  .pj-on .pj-cue{animation:pj-cue-a 3s linear both}
+  .pj-on.pj-b .pj-cue{animation-name:pj-cue-b}
+  .pj-on.pj-fa .pj-flash{animation:pj-flash-a 90ms steps(1,end) both}
+  .pj-on.pj-fb .pj-flash{animation:pj-flash-b 90ms steps(1,end) both}
+  .pj-on.pj-paused .pj-bar,.pj-on.pj-paused .pj-cue{animation-play-state:paused}
+}
+@media (prefers-reduced-motion:reduce){.pj-bar,.pj-cue,.pj-flash{display:none!important}}
+
+@keyframes pj-bar-a{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pj-bar-b{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+/* marca de cambio de rollo: el círculo que avisa al proyeccionista, justo antes del corte */
+@keyframes pj-cue-a{0%,87.9%{opacity:0}88%,95.9%{opacity:1}96%,100%{opacity:0}}
+@keyframes pj-cue-b{0%,87.9%{opacity:0}88%,95.9%{opacity:1}96%,100%{opacity:0}}
+@keyframes pj-flash-a{0%{opacity:.16}50%{opacity:.05}100%{opacity:0}}
+@keyframes pj-flash-b{0%{opacity:.16}50%{opacity:.05}100%{opacity:0}}
+@keyframes pj-grain{
+  0%{transform:translate3d(0,0,0)}10%{transform:translate3d(-6%,4%,0)}20%{transform:translate3d(5%,-7%,0)}
+  30%{transform:translate3d(-9%,-2%,0)}40%{transform:translate3d(3%,8%,0)}50%{transform:translate3d(-4%,-9%,0)}
+  60%{transform:translate3d(8%,2%,0)}70%{transform:translate3d(-2%,6%,0)}80%{transform:translate3d(7%,-4%,0)}
+  90%{transform:translate3d(-7%,-6%,0)}100%{transform:translate3d(0,0,0)}}
+@keyframes pj-weave{
+  0%,100%{transform:translate3d(0,0,0) scale(1.012)}
+  17%{transform:translate3d(.45px,-.3px,0) scale(1.012)}
+  33%{transform:translate3d(-.2px,.4px,0) scale(1.012)}
+  52%{transform:translate3d(.3px,.15px,0) scale(1.012)}
+  68%{transform:translate3d(-.4px,-.35px,0) scale(1.012)}
+  84%{transform:translate3d(.15px,.3px,0) scale(1.012)}}
+
+/* ---------- 4. Logo: el eje de anchura se comprime al pasar ---------- */
+@media (hover:hover) and (pointer:fine){
+  .hd a.logo{transition:font-stretch var(--d3) var(--ease)}
+  .hd a.logo:hover{font-stretch:60%}
+}
+.hd a.logo:focus-visible{font-stretch:60%}

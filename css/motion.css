@@ -1,0 +1,102 @@
+/* SALA · movimiento (agente B)
+   Todo lo que se oculta vive bajo html.m, una clase que solo pone js/motion.js cuando hay JS,
+   IntersectionObserver y no se pide «reducir movimiento». Sin JS, o con movimiento reducido,
+   el contenido está siempre visible. Y solo se oculta lo que motion.js ha registrado (.m-*) y aún no ha entrado (.in).
+   Gramática: todo entra en horizontal, cortes secos de color, una sola diagonal (la de la claqueta).
+   Solo se animan transform / translate / scale, opacity y clip-path (y font-stretch donde ya se usaba). */
+
+/* ---------- 0. fuera las animaciones ligadas al scroll (solo Chrome); las sustituye este sistema ---------- */
+html.m .sx,html.m .wipe{animation:none}
+
+@media (prefers-reduced-motion:no-preference){
+
+/* ---------- 1. estados de partida ---------- */
+/* k · marca: corte seco de opacidad + pequeño avance horizontal (metadatos, celdas, filas) */
+html.m .m-k:not(.in){opacity:0}
+/* f · título ajustado: la línea entra desde la derecha por la ventanilla de su caja (.fitbox recorta en x) */
+html.m .m-f:not(.in)>.fit{translate:101% 0}
+/* p · párrafo, c · bloque, w · marco de imagen: cortinilla horizontal de izquierda a derecha */
+html.m .m-p{--mct:-.4em;--mcb:-.4em;--mcl:-.3em;--mcr:-.3em}
+html.m :is(.m-p,.m-c,.m-w):not(.in){clip-path:inset(var(--mct,0) 100% var(--mcb,0) var(--mcl,0))}
+/* t · desplazamiento puro (dentro de algo que ya se recorta) */
+html.m .m-t:not(.in){translate:var(--mtx,3rem) 0}
+/* l / lb · la raya superior / inferior se dibuja de izquierda a derecha */
+html.m .m-l,html.m .m-lb{position:relative}
+html.m .m-l{border-top-color:transparent}
+html.m .m-lb{border-bottom-color:transparent}
+html.m .m-l::before,html.m .m-lb::after{content:"";position:absolute;left:0;right:0;height:var(--mlw,2px);background:currentColor;transform-origin:0 50%;pointer-events:none}
+html.m .m-l::before{top:calc(var(--mlw,2px) * -1)}
+html.m .m-lb::after{bottom:calc(var(--mlw,2px) * -1)}
+html.m .m-l:not(.in)::before,html.m .m-lb:not(.in)::after{transform:scaleX(0)}
+/* claqueta: la barra rayada está «abierta» (fuera de su hueco) hasta que se cierra de golpe */
+html.m .m-slate .stripes>rect{transform-box:fill-box}
+html.m .m-slate:not(.in) .stripes>rect{transform:translateY(-101%)}
+
+/* ---------- 2. entradas (fill backwards: al terminar manda el estilo propio del elemento) ---------- */
+html.m .m-k.in{animation:m-k var(--mkd,650ms) var(--ease) var(--md,0ms) backwards}
+html.m .m-f.in>.fit{animation:m-f var(--mfd,1100ms) var(--ease) var(--md,0ms) backwards}
+html.m .m-p.in{animation:m-clip 1000ms var(--ease) var(--md,0ms) backwards,m-tx 1150ms var(--ease) var(--md,0ms) backwards;--mtx:1.6rem}
+html.m .m-c.in{animation:m-clip var(--mcd,760ms) var(--cut) var(--md,0ms) backwards}
+html.m .m-w.in{animation:m-clip var(--mwd,1050ms) var(--cut) var(--md,0ms) backwards}
+html.m .m-w.in img{animation:m-z 1600ms var(--ease) var(--md,0ms) backwards}
+html.m .m-t.in{animation:m-tx var(--mtd,1150ms) var(--ease) var(--md,0ms) backwards}
+html.m .m-l.in::before,html.m .m-lb.in::after{animation:m-l 850ms var(--ease) var(--md,0ms) backwards}
+html.m .m-slate.in .stripes>rect{animation:m-clap 300ms cubic-bezier(.7,0,.84,0) var(--md,0ms) backwards}
+html.m .m-slate.in{animation:m-jolt 260ms var(--ease) calc(var(--md,0ms) + 300ms) backwards}
+/* lo que ya quedó atrás al cargar: sin animación */
+html.m .m-now,html.m .m-now>.fit,html.m .m-now img,html.m .m-now::before,html.m .m-now::after,html.m .m-now .stripes>rect{animation:none!important}
+
+/* duraciones por familia */
+html.m .band.m-c{--mcd:640ms}
+html.m .item.m-c{--mcd:720ms}
+html.m .item .m-t{--mtx:2.4rem}
+html.m .cta.m-c,html.m .acts>.m-c{--mcd:560ms}
+html.m .strip img.m-c{--mcd:520ms}
+html.m .vlabel.m-k{--mkx:3rem;--mkd:900ms}
+html.m .band .m-t{--mtx:4rem}
+
+/* paralaje de los rollos: la imagen vive un 8 % más grande dentro de su marco y se desplaza ±3,6 % */
+html.m .m-px img{scale:1.08;--s0:1.16}
+
+/* ---------- 3. cortinilla entre páginas (color de fondo del destino) ---------- */
+.m-shut{position:fixed;inset:0;z-index:60;pointer-events:none;visibility:hidden;background:var(--night)}
+.m-shut.on{visibility:visible}
+/* con View Transitions: la página vieja se queda quieta y la nueva (con la cortinilla encima) entra
+   por la izquierda; después la cortinilla se retira hacia la derecha y descubre la página */
+html.m::view-transition-old(root){animation:none;mix-blend-mode:normal}
+html.m::view-transition-new(root){animation:m-vt 300ms var(--cut) both;mix-blend-mode:normal}
+html.m::view-transition-group(cover){animation-duration:460ms}
+
+/* ---------- 4. vista previa del índice ---------- */
+html.m .pv{overflow:hidden}
+
+/* ---------- 5. botones: el relleno entra de izquierda a derecha y el texto se invierte justo donde pasa ---------- */
+html.m .cta{background-color:transparent;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:100% 0;background-size:0% 100%;transition:background-size 460ms var(--cut)}
+html.m .cta:is(:hover,:focus-visible,[data-state="ok"]){background-color:transparent;background-position:0 0;background-size:100% 100%}
+/* el span ocupa exactamente la caja interior del botón para que el degradado del texto y el del relleno coincidan */
+html.m .cta>span{margin:-14px -18px;padding:14px 18px;color:inherit;background-image:linear-gradient(var(--inv,var(--night)),var(--inv,var(--night))),linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:100% 0,0 0;background-size:0% 100%,100% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;transition:background-size 460ms var(--cut)}
+html.m .cta:is(:hover,:focus-visible,[data-state="ok"])>span{color:inherit;background-position:0 0,0 0;background-size:100% 100%,100% 100%}
+
+}/* fin no-preference */
+
+@keyframes m-k{0%{opacity:0;translate:var(--mkx,.75em) 0}.01%{opacity:1}100%{opacity:1;translate:0 0}}
+@keyframes m-f{from{translate:101% 0}}
+@keyframes m-clip{from{clip-path:inset(var(--mct,0) 100% var(--mcb,0) var(--mcl,0))}to{clip-path:inset(var(--mct,0) var(--mcr,0) var(--mcb,0) var(--mcl,0))}}
+@keyframes m-tx{from{translate:var(--mtx,3rem) 0}}
+@keyframes m-z{from{scale:var(--s0,1.08)}}
+@keyframes m-l{from{transform:scaleX(0)}}
+@keyframes m-clap{from{transform:translateY(-101%)}}
+@keyframes m-jolt{30%{translate:0 2px}}
+@keyframes m-vt{from{clip-path:inset(0 100% 0 0)}}
+
+/* alto contraste forzado: botones como estaban */
+@media (forced-colors:active){
+  html.m .cta>span{-webkit-text-fill-color:currentColor;background:none}
+  html.m .cta{background-image:none}
+}
+/* impresión: todo visible */
+@media print{
+  html.m [class*="m-"],html.m [class*="m-"]>.fit,html.m [class*="m-"] img{opacity:1!important;clip-path:none!important;translate:none!important;animation:none!important}
+  html.m .m-l::before,html.m .m-lb::after{transform:none!important}
+  .m-shut{display:none!important}
+}

@@ -3,16 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Arturo, Sala</title>
-<meta name="description" content="Arturo. Dirección de arte y concepto: identidad, campaña, cartelería y packaging.">
+<title>Arturo · Dirección de arte y concepto</title>
+<meta name="description" content="Portfolio de Arturo, dirección de arte y concepto: identidad, campaña, cartelería y packaging. Seis proyectos propios. Disponible para agencia o estudio.">
 <meta name="author" content="Arturo">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://arturovicav-debug.github.io/">
+<meta name="theme-color" content="#0B0B0A">
+<meta name="color-scheme" content="dark">
+<!-- Vista previa al compartir (LinkedIn, WhatsApp, Slack, X…). La imagen debe ser una URL absoluta en JPG/PNG. -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Arturo · Portfolio">
 <meta property="og:locale" content="es_ES">
-<meta property="og:title" content="Arturo, Sala">
-<meta property="og:description" content="Arturo. Dirección de arte y concepto: identidad, campaña, cartelería y packaging.">
-<meta property="og:image" content="img/aisu-01-1440.webp">
+<meta property="og:url" content="https://arturovicav-debug.github.io/">
+<meta property="og:title" content="Arturo · Dirección de arte y concepto">
+<meta property="og:description" content="Lo que se ve, se decide. Seis proyectos de identidad, campaña, cartelería y packaging. Disponible para agencia o estudio.">
+<meta property="og:image" content="https://arturovicav-debug.github.io/og-image.jpg">
+<meta property="og:image:secure_url" content="https://arturovicav-debug.github.io/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="«Lo que se ve, se decide» en letras grandes sobre fondo negro y, debajo, una tira de fotogramas con los seis proyectos de Arturo, director de arte.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arturo · Dirección de arte y concepto">
+<meta name="twitter:description" content="Lo que se ve, se decide. Seis proyectos de identidad, campaña, cartelería y packaging. Disponible para agencia o estudio.">
+<meta name="twitter:image" content="https://arturovicav-debug.github.io/og-image.jpg">
+<meta name="twitter:image:alt" content="«Lo que se ve, se decide» en letras grandes sobre fondo negro y, debajo, una tira de fotogramas con los seis proyectos de Arturo, director de arte.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://arturovicav-debug.github.io/#arturo",
+      "name": "Arturo",
+      "jobTitle": "Director de arte",
+      "description": "Dirección de arte y concepto: identidad visual, campaña, cartelería y packaging. Disponible para incorporarse a agencia o estudio.",
+      "email": "mailto:arturo.vic.av@gmail.com",
+      "url": "https://arturovicav-debug.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/arturo-vicioso-%C3%A1vila-ab094b353/"],
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad de Sevilla" },
+      "knowsAbout": ["Dirección de arte", "Concepto creativo", "Identidad visual", "Campaña", "Cartelería", "Packaging", "Personajes de marca", "Sistemas de marca"],
+      "knowsLanguage": ["es", "en", "fr"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://arturovicav-debug.github.io/#website",
+      "url": "https://arturovicav-debug.github.io/",
+      "name": "Arturo · Dirección de arte y concepto",
+      "inLanguage": "es-ES",
+      "author": { "@id": "https://arturovicav-debug.github.io/#arturo" }
+    }
+  ]
+}
+</script>
 <link rel="preload" as="image" href="img/aisu-01-1440.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,50..150,100..900;1,50..150,100..900&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap">
 <style>
@@ -411,9 +457,43 @@ html.has-cur,html.has-cur *{cursor:none!important}
 @keyframes vt-out{to{clip-path:inset(0 0 0 100%)}}
 @keyframes vt-in{from{clip-path:inset(0 100% 0 0)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* === contenido (agente C) === */
+/* LinkedIn en la cabecera: solo cuando cabe en la columna de navegación sin apretar */
+.nav .nav-ext{display:none}
+@media (min-width:1360px){.nav .nav-ext{display:block}}
+/* enlaces secundarios bajo la presentación de la portada */
+.hero-sub .lnks{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:14px}
+/* fila de llamadas a la acción (Sobre mí) */
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+/* contacto en el menú móvil */
+.menu .menu-ext{display:flex;flex-wrap:wrap;gap:10px 22px}
+/* Sistema: entradilla y títulos de sección */
+.sy-intro .bl{--c:1/11;--ct:1/-1;margin-top:clamp(20px,3vw,40px)}
+.sy .sec>h2.meta{margin:1em 0}
 </style>
+<link rel="stylesheet" href="css/intro.css">
+<link rel="stylesheet" href="css/motion.css">
+<script src="js/intro-gate.js"></script>
 </head>
 <body>
+<noscript>
+<div style="background:#0B0B0A;color:#F3F2EE;padding:96px 16px 64px;font:400 15px/1.55 'DM Mono',Menlo,Consolas,monospace;text-transform:uppercase;letter-spacing:.03em">
+  <h1 style="margin:0 0 20px;font:inherit">Arturo — Dirección de arte y concepto</h1>
+  <p style="margin:0 0 28px;font:900 clamp(56px,13vw,180px)/.82 Anybody,'Arial Narrow',Arial,sans-serif;font-stretch:62%;letter-spacing:0">Lo que<br>se ve,<br>se decide.</p>
+  <p style="margin:0 0 28px;max-width:40em">Identidad, campaña, cartelería y packaging. Disponible para incorporarse a agencia o estudio.</p>
+  <ol style="margin:0 0 28px;padding:0;list-style:none;max-width:40em;border-top:1px solid rgba(243,242,238,.22)">
+    <li style="padding:8px 0;border-bottom:1px solid rgba(243,242,238,.22)">001 · Aisu. — Identidad y campaña para moda masculina · 2026</li>
+    <li style="padding:8px 0;border-bottom:1px solid rgba(243,242,238,.22)">002 · La Garita — Campaña de cartelería para una película · 2026</li>
+    <li style="padding:8px 0;border-bottom:1px solid rgba(243,242,238,.22)">003 · Gaviota — Identidad para una marca de surf · 2026</li>
+    <li style="padding:8px 0;border-bottom:1px solid rgba(243,242,238,.22)">004 · Eggs — Identidad y packaging para desayunos · 2025</li>
+    <li style="padding:8px 0;border-bottom:1px solid rgba(243,242,238,.22)">005 · Verde — Identidad para el cuidado de plantas · 2026</li>
+    <li style="padding:8px 0;border-bottom:1px solid rgba(243,242,238,.22)">006 · Miso — Sistema de logotipo para hostelería · 2026</li>
+  </ol>
+  <p style="margin:0 0 8px"><a href="mailto:arturo.vic.av@gmail.com" style="color:inherit;text-decoration:underline">arturo.vic.av@gmail.com</a> · <a href="https://www.linkedin.com/in/arturo-vicioso-%C3%A1vila-ab094b353/" rel="me noopener" style="color:inherit;text-decoration:underline">LinkedIn</a></p>
+  <p style="margin:0;color:#8E8C86">Activa JavaScript para ver los proyectos completos.</p>
+</div>
+</noscript>
 
 <a class="skip" href="#main" data-skip>Saltar al contenido</a>
 <header class="hd" id="hd">
@@ -424,6 +504,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
       <a href="#trabajo" data-link>Trabajo</a>
       <a href="#sobre-mi" data-link>Sobre mí</a>
       <a href="#contacto" data-link>Contacto</a>
+      <a class="nav-ext" href="https://www.linkedin.com/in/arturo-vicioso-%C3%A1vila-ab094b353/" target="_blank" rel="noopener" data-linkedin>LinkedIn <span aria-hidden="true">↗</span><span class="sr"> (se abre en otra pestaña)</span></a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" style="--cm:3/5">Menú</button>
   </div>
@@ -437,16 +518,17 @@ html.has-cur,html.has-cur *{cursor:none!important}
     <li><a href="#sobre-mi" data-link><span>02</span>Sobre mí</a></li>
     <li><a href="#contacto" data-link><span>03</span>Contacto</a></li>
   </ol>
-  <p class="meta">Dirección de arte y concepto</p>
+  <p class="meta menu-ext"><a class="ul" href="https://www.linkedin.com/in/arturo-vicioso-%C3%A1vila-ab094b353/" target="_blank" rel="noopener" data-linkedin>LinkedIn <span aria-hidden="true">↗</span><span class="sr"> (se abre en otra pestaña)</span></a><a class="ul" href="mailto:arturo.vic.av@gmail.com" data-email>arturo.vic.av@gmail.com</a></p>
+  <p class="meta"><span data-fullname>Arturo</span> · Dirección de arte y concepto · <span data-availability>Disponible para incorporarse a agencia o estudio</span></p>
 </div>
 
 <main id="main" tabindex="-1"></main>
 
 <footer class="ft">
   <div class="wrap g meta">
-    <div class="fa">Arturo © 2026</div>
-    <div class="fb"><a href="#trabajo" data-link>Trabajo</a><a href="#sobre-mi" data-link>Sobre mí</a><a href="#contacto" data-link>Contacto</a></div>
-    <div class="fc"><a href="#sistema" data-link>Sistema</a><button type="button" id="gridBtn" aria-pressed="false">Retícula</button></div>
+    <div class="fa"><span data-fullname>Arturo</span> © <span data-year>2026</span></div>
+    <div class="fb"><a href="#trabajo" data-link>Trabajo</a><a href="#sobre-mi" data-link>Sobre mí</a><a href="#contacto" data-link>Contacto</a><a href="https://www.linkedin.com/in/arturo-vicioso-%C3%A1vila-ab094b353/" target="_blank" rel="noopener" data-linkedin>LinkedIn <span aria-hidden="true">↗</span><span class="sr"> (se abre en otra pestaña)</span></a></div>
+    <div class="fc"><a href="#sistema" data-link>Sistema de diseño</a><button type="button" id="gridBtn" aria-pressed="false" aria-keyshortcuts="G">Retícula (G)</button></div>
     <div class="fd"><a href="#top" id="toTop">Rebobinar ↑</a></div>
   </div>
 </footer>
@@ -487,6 +569,17 @@ function resolve() {
   return { key: "", view: home };
 }
 
+/* ---------- datos comunes de las plantillas ---------- */
+/* Contadores y años salen de data.js: añadir un proyecto actualiza «01/06», «6 proyectos» y «2025–2026». */
+const NAME = S.fullName || S.name;
+const NT = String(P.length).padStart(2, "0");
+const YRS = (() => { const ys = P.map(p => p.year), a = Math.min(...ys), b = Math.max(...ys); return a === b ? String(a) : `${a}–${b}`; })();
+const LI = S.linkedin || ((S.socials || []).find(s => /linkedin/i.test(s.label)) || {}).url || "";
+const NEWTAB = `<span class="sr"> (se abre en otra pestaña)</span>`;
+const ext = (url, label, cls = "") => `<a${cls ? ` class="${cls}"` : ""} href="${esc(url)}" target="_blank" rel="noopener">${label} <span aria-hidden="true">↗</span>${NEWTAB}</a>`;
+const ctaExt = (url, label) => `<a class="cta" href="${esc(url)}" target="_blank" rel="noopener"><span>${esc(label)} <span aria-hidden="true">↗</span>${NEWTAB}</span></a>`;
+const arr = s => `<span aria-hidden="true">${s}</span>`;
+
 /* ---------- HOME ---------- */
 function home() {
   const L = S.b.statement;
@@ -494,35 +587,35 @@ function home() {
   return `
   <section class="hero wrap" aria-labelledby="stmt" data-hb="${"#0B0B0A"}" data-hf="#F3F2EE">
     <div class="hero-top g meta">
-      <span class="a"><b>Arturo</b> — Dirección de arte y concepto</span>
+      <span class="a"><b>${esc(NAME)}</b> — ${esc(S.practice)}</span>
       <span class="b2">Identidad / Campaña / Cartelería / Packaging</span>
-      <span class="c2"><span class="dot" aria-hidden="true"></span>Disponible</span>
+      <span class="c2"><span class="dot" aria-hidden="true"></span>${esc(S.availability)}</span>
     </div>
-    <h1 class="stmt" id="stmt"><span class="sr">${esc(S.b.statementText)}</span><span class="fitgroup" data-maxvh="70" aria-hidden="true">${L.map(l => fitLine(esc(up(l)), "mega", "w")).join("")}</span></h1>
+    <h1 class="stmt" id="stmt"><span class="sr">${esc(NAME)}, ${esc(S.practice.toLowerCase())}. ${esc(S.b.statementText)}</span><span class="fitgroup" data-maxvh="70" aria-hidden="true">${L.map(l => fitLine(esc(up(l)), "mega", "w")).join("")}</span></h1>
     <div class="proj g">
-      <p class="aside meta" aria-hidden="true">Proyección<br>6 proyectos · 2025–2026<br>Corte seco cada 3 s</p>
-      <div class="frame" id="projector" aria-roledescription="carrusel" aria-label="Portadas de los proyectos">
+      <p class="aside meta" aria-hidden="true">Proyección<br>${NT} proyectos · ${YRS}<br>Corte seco cada 3 s</p>
+      <div class="frame" id="projector" role="region" aria-roledescription="carrusel" aria-label="Portadas de los proyectos">
         ${img(P[0].cover, { eager: true, sizes: "(min-width:1100px) 62vw, 100vw", alt: "", style: "object-fit:contain" })}
-        <div class="ctrl meta"><span id="pjLabel" aria-live="off">01/06 · ${esc(up(P[0].title))}</span><button type="button" id="pjBtn" aria-pressed="false">Pausa</button></div>
+        <div class="ctrl meta"><span id="pjLabel" aria-live="off">01/${NT} · ${esc(up(P[0].title))}</span><button type="button" id="pjBtn" aria-pressed="false">Pausa</button></div>
       </div>
     </div>
     <div class="hero-sub g">
       <p class="bl">${esc(S.b.intro)}</p>
-      <p class="st meta">Seis proyectos propios, 2025–2026. Identidad, personaje, cartelería, packaging y manual de marca. <a class="ul" href="#trabajo" data-link>Ver todo el trabajo</a></p>
+      <p class="st meta">${NT} proyectos propios, ${YRS}: identidad, personaje, cartelería, packaging y manual de marca.<span class="lnks"><a class="ul" href="#trabajo" data-link>Ver el trabajo ${arr("▶")}</a><a class="ul" href="#sobre-mi" data-link>Sobre mí</a>${LI ? ext(LI, "LinkedIn", "ul") : ""}</span></p>
     </div>
   </section>
   ${reels}
-  <section class="allwork wrap" data-hb="#0B0B0A" data-hf="#F3F2EE">
-    <p class="meta" style="margin:0 0 10px">Índice completo · filtros por disciplina</p>
+  <section class="allwork wrap" data-hb="#0B0B0A" data-hf="#F3F2EE" aria-labelledby="h-all">
+    <h2 class="meta" id="h-all" style="margin:0 0 10px">Índice completo · filtros por disciplina</h2>
     <a href="#trabajo" data-link data-cursor="Índice" aria-label="Ver todo el trabajo">${fitLine("TODO EL TRABAJO ▶", "dxl", "w")}</a>
   </section>
   ${closing()}`;
 }
 
 function reel(p) {
-  const top = `<div class="reel-top g meta"><span>${p.n2}/06</span><span><b>${esc(up(p.title))}</b></span><span>${esc(p.kind)}</span><span>TC ${TCf((p.i + 1) * 2280)}</span></div>`;
-  const title = (cls = "mega", mode = "w") => `<a class="hit" href="#${p.slug}" data-link data-cover="${p.slug}" aria-label="${esc(p.title)}: ver proyecto">${fitLine(esc(up(p.title)), cls + " sx", mode)}</a>`;
-  const act = `<a class="cta" href="#${p.slug}" data-link data-cover="${p.slug}"><span>Ver proyecto ▶</span></a>`;
+  const top = `<div class="reel-top g meta"><span>${p.n2}/${NT}</span><span><b>${esc(up(p.title))}</b></span><span>${esc(p.kind)}</span><span>TC ${TCf((p.i + 1) * 2280)}</span></div>`;
+  const title = (cls = "mega", mode = "w") => `<a class="hit" href="#${p.slug}" data-link data-cover="${p.slug}" aria-label="Ver proyecto: ${esc(p.title)}">${fitLine(esc(up(p.title)), cls + " sx", mode)}</a>`;
+  const act = `<a class="cta" href="#${p.slug}" data-link data-cover="${p.slug}"><span>Ver proyecto ${arr("▶")}<span class="sr">: ${esc(p.title)}</span></span></a>`;
   const foot = `<div class="foot g"><p class="hook">${esc(p.b.hook)}</p><div class="act">${act}</div></div>`;
   const link = (key, cls, sizes, style = "") => `<a class="${cls}" href="#${p.slug}" data-link data-cover="${p.slug}" data-cursor="Ver" tabindex="-1" aria-hidden="true">${img(key, { sizes, alt: "", vt: key === p.cover ? p.slug : "", style })}</a>`;
   const hd = `data-hb="${p.color.ground}" data-hf="${p.color.ink}"`;
@@ -533,10 +626,10 @@ function reel(p) {
     case "gaviota": inner = `${top}<div class="sx ttl">${fitLine(esc(up(p.title)), "mega", "w")}</div><div class="g wrapx">${link("gaviota-01", "land wipe", "(min-width:1100px) 55vw, 100vw")}${link("gaviota-02", "tall", "(min-width:1100px) 30vw, 60vw")}</div>${foot}`; break;
     case "eggs": inner = `${top}${title("mega", "w")}<div class="g">${link("eggs-01", "logo", "(min-width:1100px) 60vw, 100vw")}</div>${foot}`; break;
     case "verde": inner = `${top}<div class="split g"><div class="l">${title("mega", "w")}<p class="hook">${esc(p.b.hook)}</p><div>${act}</div></div><div class="r">${["verde-01", "verde-02", "verde-05", "verde-07"].map(k => `<a href="#${p.slug}" data-link data-cover="${p.slug}" data-cursor="Ver" tabindex="-1" aria-hidden="true">${img(k, { sizes: "(min-width:1100px) 24vw, 50vw", alt: "", vt: k === p.cover ? p.slug : "", style: "object-fit:contain" })}<span class="code">${k.split("-")[1]}A</span></a>`).join("")}</div></div>`; break;
-    case "miso": inner = `${top}<div class="split g">${link(p.cover, "img wipe", "(min-width:1100px) 62vw, 100vw", "object-fit:contain")}<div class="side">${title("dxl", "w")}<table class="meta"><tbody><tr><td>Tipo</td><td>${esc(p.kind)}</td></tr><tr><td>Lema</td><td>Good things. Everyday.</td></tr><tr><td>Sistema</td><td>Horizontal, monocromo, una tinta, sobre color</td></tr></tbody></table>${act}</div></div>`; break;
+    case "miso": inner = `${top}<div class="split g">${link(p.cover, "img wipe", "(min-width:1100px) 62vw, 100vw", "object-fit:contain")}<div class="side">${title("dxl", "w")}<table class="meta"><tbody><tr><td>Tipo</td><td>${esc(p.kind)}</td></tr><tr><td>Lema</td><td>${esc(p.b.hook)}</td></tr><tr><td>Sistema</td><td>Horizontal, monocromo, una tinta, sobre color</td></tr></tbody></table>${act}</div></div>`; break;
     default: inner = `${top}${title()}${foot}`;
   }
-  return `<section class="reel wrap v-${p.slug === "la-garita" ? "garita" : p.slug === "gaviota" ? "gav" : p.slug}" style="${rv(p)}" ${hd} aria-label="${esc(p.title)}">${inner}</section>`;
+  return `<section class="reel wrap v-${p.slug === "la-garita" ? "garita" : p.slug === "gaviota" ? "gav" : p.slug}" style="${rv(p)}" ${hd} aria-labelledby="h-r-${p.slug}"><h2 class="sr" id="h-r-${p.slug}">${esc(p.title)}: ${esc(p.kind)}</h2>${inner}</section>`;
 }
 
 function closing() {
@@ -544,7 +637,7 @@ function closing() {
     <div class="row1 g meta"><span style="--c:1/5;--ct:1/3">Contacto</span><span class="rt" style="--c:9/-1;--ct:3/-1"><span class="dot" aria-hidden="true"></span>${esc(S.availability)}</span></div>
     <h2 class="sr" id="h-close">Contacto</h2>
     <div class="mailbox">${fitLine(esc(S.email), "mailfit dxl", "w", ' id="mail"', 66)}</div>
-    <div class="acts"><button class="cta" type="button" data-copy="${esc(S.email)}"><span>Copiar correo</span></button><a class="cta" href="mailto:${esc(S.email)}"><span>Escribir ▶</span></a><span class="meta" id="copyMsg" aria-live="polite"></span>${S.socials.map(s => `<a class="cta" href="${esc(s.url)}" target="_blank" rel="noopener"><span>${esc(s.label)}</span></a>`).join("")}</div>
+    <div class="acts"><button class="cta" type="button" data-copy="${esc(S.email)}"><span>Copiar correo</span></button><a class="cta" href="mailto:${esc(S.email)}"><span>Escribir ${arr("▶")}</span></a>${(S.socials || []).map(s => ctaExt(s.url, s.label)).join("")}<span class="meta" id="copyMsg" aria-live="polite"></span></div>
     <div style="height:clamp(64px,9vw,140px)"></div>
   </section>`;
 }
@@ -554,7 +647,7 @@ function work() {
   const f = store.get("filter", "todo");
   const count = id => id === "todo" ? P.length : P.filter(p => p.filters.includes(id)).length;
   return `<section class="ph wrap" aria-labelledby="h-w" data-hb="#0B0B0A" data-hf="#F3F2EE">
-    <div class="meta-row g meta"><span>Índice</span><span>06 proyectos · Identidad, campaña, personaje, packaging</span><span>2025–2026</span></div>
+    <div class="meta-row g meta"><span>Índice</span><span>${NT} proyectos propios · Identidad, campaña, personaje, packaging</span><span>${YRS}</span></div>
     <h1 id="h-w" tabindex="-1">${fitLine("TRABAJO", "mega", "w")}</h1>
     <div class="filters" role="group" aria-label="Filtrar por disciplina">
       ${[{ id: "todo", label: "Todo" }, ...D.filters].map(x => `<button class="fbtn" type="button" data-f="${x.id}" aria-pressed="${x.id === f}"${count(x.id) ? "" : " disabled"}>${esc(x.label)} (${String(count(x.id)).padStart(2, "0")})</button>`).join("")}
@@ -613,8 +706,8 @@ function project(p) {
   const nx = p.next;
   return `<article class="pj" style="${rv(p)}" data-hb="${p.color.ground}" data-hf="${p.color.ink}" aria-labelledby="h-p">
     <div class="wrap">
-      <div class="slate" aria-label="Ficha técnica"><svg class="stripes" aria-hidden="true" focusable="false"><defs><pattern id="sl-${p.slug}" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="20" height="40" fill="currentColor"></rect></pattern></defs><rect width="100%" height="100%" fill="url(#sl-${p.slug})"></rect></svg>
-        <dl class="dlist"><div><dt>Prod.</dt><dd>${esc(p.title)}</dd></div><div><dt>Rollo</dt><dd>${p.n2} / 06</dd></div><div><dt>Año</dt><dd>${p.year}</dd></div><div><dt>Cliente</dt><dd>${esc(p.client)} · ${esc(p.context)}</dd></div><div><dt>Disciplina</dt><dd>${esc(p.disciplines.join(", "))}</dd></div><div><dt>Servicios</dt><dd>${esc(p.services.join(", "))}</dd></div></dl>
+      <div class="slate" role="group" aria-label="Ficha técnica"><svg class="stripes" aria-hidden="true" focusable="false"><defs><pattern id="sl-${p.slug}" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="20" height="40" fill="currentColor"></rect></pattern></defs><rect width="100%" height="100%" fill="url(#sl-${p.slug})"></rect></svg>
+        <dl class="dlist"><div><dt>Proyecto</dt><dd>${esc(p.title)}</dd></div><div><dt>Nº</dt><dd>${p.n2} / ${NT}</dd></div><div><dt>Año</dt><dd>${p.year}</dd></div><div><dt>Encargo</dt><dd>${esc(p.client)} · ${esc(p.context)}</dd></div><div><dt>Disciplinas</dt><dd>${esc(p.disciplines.join(", "))}</dd></div><div><dt>Piezas</dt><dd>${esc(p.services.join(", "))}</dd></div></dl>
       </div>
       <h1 class="pj-title" id="h-p" tabindex="-1"><span class="sr">${esc(p.title)}</span><span aria-hidden="true">${fitLine(esc(up(p.title)), "mega", "w")}</span></h1>
       <div class="pj-hook g"><p class="bl">${esc(p.b.lead || (p.b.hook + " " + p.a.lede))}</p><p class="meta">${esc(p.kind)}</p></div>
@@ -624,31 +717,34 @@ function project(p) {
       </figure>
       <div class="pb">${p.blocks.map((b, n) => bBlock(p, b, n, st)).join("")}</div>
     </div>
-    <a class="next" href="#${nx.slug}" data-link data-cover="${nx.slug}" data-cursor="Siguiente" style="--ng:${nx.color.ground};--ni:${nx.color.ink}" data-hb="${nx.color.ground}" data-hf="${nx.color.ink}">
-      <div class="top meta"><span>Siguiente ▶ ${nx.n2}/06</span><span>${esc(nx.kind)}</span></div>
+    <a class="next" href="#${nx.slug}" data-link data-cover="${nx.slug}" data-cursor="Siguiente" style="--ng:${nx.color.ground};--ni:${nx.color.ink}" data-hb="${nx.color.ground}" data-hf="${nx.color.ink}" aria-label="Siguiente proyecto: ${esc(nx.title)}, ${esc(nx.kind)}">
+      <div class="top meta"><span>Siguiente ▶ ${nx.n2}/${NT}</span><span>${esc(nx.kind)}</span></div>
       <div class="nimg">${img(nx.cover, { sizes: "100vw", alt: "", style: "object-fit:contain" })}</div>
       <div class="cross" style="margin-top:clamp(12px,1.6vw,24px)">${fitLine(esc(up(nx.title)), "mega", "w")}</div>
     </a>
-    <nav class="pnav meta" aria-label="Navegación de proyecto"><a class="ul" href="#${p.prev.slug}" data-link data-cover="${p.prev.slug}">◀ Anterior: ${esc(p.prev.title)}</a><a class="ul" href="#trabajo" data-link>Volver al trabajo</a><a class="ul" href="#${nx.slug}" data-link data-cover="${nx.slug}">Siguiente: ${esc(nx.title)} ▶</a></nav>
+    <nav class="pnav meta" aria-label="Navegación de proyecto"><a class="ul" href="#${p.prev.slug}" data-link data-cover="${p.prev.slug}">${arr("◀")} Anterior: ${esc(p.prev.title)}</a><a class="ul" href="#trabajo" data-link>Volver al trabajo</a><a class="ul" href="#${nx.slug}" data-link data-cover="${nx.slug}">Siguiente: ${esc(nx.title)} ${arr("▶")}</a></nav>
   </article>`;
 }
 
 /* ---------- SOBRE MÍ ---------- */
 function about() {
-  const A = D.about;
+  const A = D.about, X = A.experience || [], TL = S.tools || [], E = A.education;
+  const crTitle = (X.length ? "Experiencia, formación" : "Formación") + (TL.length ? ", idiomas y herramientas" : " e idiomas");
   return `<section class="ph wrap ab" aria-labelledby="h-ab" data-hb="#0B0B0A" data-hf="#F3F2EE">
-    <div class="meta-row g meta"><span>Sobre mí</span><span>Dirección de arte y concepto</span><span></span></div>
-    <h1 id="h-ab" tabindex="-1">${fitLine("ARTURO", "mega", "w")}</h1>
+    <div class="meta-row g meta"><span>Sobre mí</span><span>${esc(S.practice)}</span><span><span class="dot" aria-hidden="true"></span>${esc(S.availability)}</span></div>
+    <h1 id="h-ab" tabindex="-1"><span class="sr">Sobre mí: ${esc(NAME)}</span><span aria-hidden="true">${fitLine(esc(up(NAME)), "mega", "w")}</span></h1>
     <div class="g"><p class="lede bl">${esc(A.b.lede)}</p><div class="body">${A.b.body.map(t => `<p class="b">${esc(t)}</p>`).join("")}</div></div>
-    <div class="sec"><p class="meta" style="margin:0 0 10px">Lo que hago</p><ul class="exp">${A.expertise.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
-    <div class="sec"><p class="meta" style="margin:0 0 10px">Cómo trabajo</p><div class="prn">${A.principles.map(x => `<div><h3>${esc(x.title)}</h3><p class="b">${esc(x.text)}</p></div>`).join("")}</div></div>
-    <div class="sec"><p class="meta" style="margin:0 0 28px;text-align:center">Formación e idiomas</p>
+    <div class="sec"><h2 class="meta" style="margin:0 0 10px">Lo que hago</h2><ul class="exp">${A.expertise.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>
+    <div class="sec"><h2 class="meta" style="margin:0 0 10px">Cómo trabajo</h2><div class="prn">${A.principles.map(x => `<div><h3>${esc(x.title)}</h3><p class="b">${esc(x.text)}</p></div>`).join("")}</div></div>
+    <div class="sec"><h2 class="meta" style="margin:0 0 28px;text-align:center">${crTitle}</h2>
       <dl class="cr">
-        ${A.experience.map(x => `<div><dt>${esc(x.role)}</dt><dd>${esc(x.org)}<small>${esc(x.note)}</small></dd></div>`).join("")}
-        <div><dt>Formación</dt><dd>${esc(A.education.org)}<small>${esc(A.education.title)} · ${esc(A.education.note)}</small></dd></div>
-        <div><dt>Idiomas</dt><dd>${A.languages.map(l => esc(l.lang)).join(" · ")}<small>${A.languages.map(l => `${esc(l.lang)}: ${esc(l.level)}`).join(" · ")}</small></dd></div>
-        ${S.tools.length ? `<div><dt>Herramientas</dt><dd>${esc(S.tools.join(" · "))}</dd></div>` : ""}
+        ${X.map(x => `<div><dt>${esc(x.role)}</dt><dd>${esc(x.org)}${x.note ? `<small>${esc(x.note)}</small>` : ""}</dd></div>`).join("")}
+        <div><dt>Formación</dt><dd>${esc(E.title)}<small>${esc(E.org)}${E.note ? ` · ${esc(E.note)}` : ""}</small></dd></div>
+        <div><dt>Idiomas</dt><dd>${A.languages.map(l => esc(l.lang)).join("&nbsp;· ")}<small>${A.languages.map(l => `${esc(l.lang)}&nbsp;${esc(l.level.toLowerCase())}`).join("&nbsp;· ")}</small></dd></div>
+        ${TL.length ? `<div><dt>Herramientas</dt><dd>${esc(TL.join(" · "))}</dd></div>` : ""}
       </dl></div>
+    <div class="sec ab-next"><h2 class="meta" style="margin:0 0 14px">¿Hablamos?</h2>
+      <div class="cta-row"><a class="cta" href="mailto:${esc(S.email)}"><span>Escribir ${arr("▶")}</span></a>${LI ? ctaExt(LI, "LinkedIn") : ""}<a class="cta" href="#trabajo" data-link><span>Ver trabajo ${arr("▶")}</span></a></div></div>
     <div style="height:var(--sec)"></div>
   </section>
   ${closing()}`;
@@ -656,7 +752,7 @@ function about() {
 
 function contact() {
   return `<section class="ph wrap" aria-labelledby="h-ct" data-hb="#0B0B0A" data-hf="#F3F2EE">
-    <div class="meta-row g meta"><span>Contacto</span><span></span><span></span></div>
+    <div class="meta-row g meta"><span>Contacto</span><span>Correo o LinkedIn. Para una vacante, una prueba o una conversación.</span><span>${esc(NAME)} · ${esc(S.practice)}</span></div>
     <h1 id="h-ct" tabindex="-1">${fitLine("ESCRÍBEME.", "mega", "w")}</h1>
     <div style="height:clamp(40px,6vw,96px)"></div>
   </section>
@@ -664,21 +760,35 @@ function contact() {
 }
 
 function system() {
-  const T = [["Mega", "mega", "Anybody 900 · anchura 50 % (ajustable 50–150) · 74–350 px · interlínea 0,80", "LO QUE SE VE"], ["Display XL", "dxl", "Anybody 900 · 56 % · 58–240 px · 0,82", "TRABAJO"], ["Display L", "dl", "Anybody 850 · 62 % · 45–136 px · 0,86", "LA GARITA"], ["H1", "h1", "Anybody 800 · 70 % · 35–83 px · 0,90", "PERSONAJE"], ["H2", "h2", "Anybody 750 · 80 % · 26–48 px · 0,96", "IDENTIDAD"], ["Body L", "bl", "Anybody 450 · 100 % · 21–33 px · 1,28", "Decido qué se ve y qué se queda fuera."], ["Navegación", "wide", "Anybody 750 · 125 % · 14 px · versalitas", "TRABAJO"], ["Metadata", "meta", "DM Mono 400 · 12 px · +3 % · versalitas", "TC 00:01:35:00 · 03/06"]];
+  const T = [["Mega", "mega", "Anybody 900 · anchura 50 % (ajustable 50–150) · 74–350 px · interlínea 0,80", "LO QUE SE VE"], ["Display XL", "dxl", "Anybody 900 · 56 % · 58–240 px · 0,82", "TRABAJO"], ["Display L", "dl", "Anybody 850 · 62 % · 45–136 px · 0,86", "LA GARITA"], ["H1", "h1", "Anybody 800 · 70 % · 35–83 px · 0,90", "PERSONAJE"], ["H2", "h2", "Anybody 750 · 80 % · 26–48 px · 0,96", "IDENTIDAD"], ["Body L", "bl", "Anybody 450 · 100 % · 21–33 px · 1,28", "Decido qué se ve y qué se queda fuera."], ["Navegación", "wide", "Anybody 750 · 125 % · 14 px · versalitas", "TRABAJO"], ["Metadata", "meta", "DM Mono 400 · 12 px · +3 % · versalitas", `TC 00:01:35:00 · 03/${NT}`]];
   const cols = [["Sala", "#0B0B0A", "#F3F2EE", "Fondo base"], ["Pantalla", "#F3F2EE", "#0B0B0A", "Tinta base, contacto"], ...P.map(p => [p.title, p.color.ground, p.color.ink, `Fondo de ${p.title}`])];
+  /* contraste fondo/tinta de cada proyecto, calculado (WCAG 2.x) */
+  const cr = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
+  const nf = v => v.toFixed(1).replace(".", ",");
+  const ratios = P.map(p => ({ t: p.title, r: cr(p.color.ground, p.color.ink) })).sort((a, b) => a.r - b.r);
+  const lo = ratios[0], hi = ratios[ratios.length - 1], fails = ratios.filter(x => x.r < 4.5);
+  const crNote = `Contraste de las parejas fondo/tinta: de ${nf(lo.r)} : 1 (${esc(lo.t)}) a ${nf(hi.r)} : 1 (${esc(hi.t)}). Sala/pantalla: ${nf(cr("#0B0B0A", "#F3F2EE"))} : 1. ${fails.length ? `Por debajo de WCAG AA (4,5 : 1): ${fails.map(x => esc(x.t)).join(", ")}.` : "Todas cumplen WCAG AA."}`;
   return `<section class="ph wrap sy" aria-labelledby="h-sy" data-hb="#0B0B0A" data-hf="#F3F2EE">
-    <div class="meta-row g meta"><span>Sistema</span><span>Reglas de la versión experimental</span><span>B</span></div>
-    <h1 id="h-sy" tabindex="-1">${fitLine("SISTEMA", "mega", "w")}</h1>
-    <div class="sec"><p class="meta">Gramática</p>${["El texto grande solo sangra por la derecha. La primera letra siempre se lee.", "Tres colores activos como máximo: fondo, tinta e imagen. El color lo pone el proyecto.", "Una sola diagonal: la de la claqueta, a 45°.", "Las imágenes van a sangre o sobre la retícula; los desplazamientos, en múltiplos de dos columnas.", "Cortes secos entre colores, nunca fundidos. El movimiento entra en horizontal.", "El texto solo pisa imagen en la portada, en modo diferencia."].map((r, i) => `<div class="row"><span class="meta">Regla ${i + 1}</span><span class="bl" style="max-width:none">${r}</span></div>`).join("")}</div>
-    <div class="sec"><p class="meta">Tipografía</p>${T.map(t => `<div class="row"><span class="meta">${t[0]}<br><span style="opacity:.6">${t[2]}</span></span><span class="s ${t[1]}">${t[3]}</span></div>`).join("")}</div>
-    <div class="sec"><p class="meta">Color</p><div class="swb">${cols.map(c => `<div style="background:${c[1]};color:${c[2]};box-shadow:inset 0 0 0 1px rgba(243,242,238,.2)"><span class="meta">${c[3]}</span><b>${esc(c[0])}</b><span class="meta">${c[1]} / ${c[2]}</span></div>`).join("")}</div><p class="meta" style="margin-top:12px">Contraste de las parejas fondo/tinta: de 5,8 : 1 (Gaviota) a 11,6 : 1 (Eggs). Sala/pantalla: 17,6 : 1. Todas cumplen WCAG AA.</p></div>
-    <div class="sec"><p class="meta">Retícula</p><div class="gbars">${[["Escritorio ≥ 1100 px", 16, "12px", "24 px"], ["Tableta 700–1099 px", 8, "12px", "20 px"], ["Móvil < 700 px", 4, "10px", "16 px"]].map(r => `<div><p class="meta" style="margin:0 0 8px">${r[0]} · ${r[1]} columnas · medianil ${r[2]} · margen ${r[3]} · sin ancho máximo</p><div class="bar" style="grid-template-columns:repeat(${r[1]},1fr);--g:${r[2]}">${"<i></i>".repeat(r[1])}</div></div>`).join("")}</div></div>
-    <div class="sec"><p class="meta">Movimiento</p>${[["Título que se abre", "Cada línea ajustada busca su anchura (eje wdth 50–150) hasta llenar la caja. 700 ms."], ["Proyector", "Las portadas cambian con corte seco cada 3 s. Se puede pausar; con «reducir movimiento» no avanza solo."], ["Scroll", "Títulos y bloques entran desde la derecha; las imágenes se descubren con una cortinilla horizontal."], ["Índice", "Al pasar el ratón la fila se inunda con el color del proyecto y el título se ensancha."], ["Transición", "Cortinilla de 380 ms entre páginas; la portada viaja a su sitio en la ficha."]].map(r => `<div class="row"><span class="meta">${r[0]}</span><span class="b">${r[1]}</span></div>`).join("")}</div>
-    <div class="sec"><p class="meta">Componentes</p>${["Cabecera con código de tiempo y barra de progreso", "Bloque ajustado (fitbox)", "Proyector", "Rollo de proyecto (6 variantes)", "Fila de índice con inundación de color", "Filtro", "Claqueta", "Bloque de texto", "Tira de contactos", "Especificación", "Bandas de color", "Cita ajustada", "Siguiente rollo", "Contacto"].map((x, i) => `<div class="row"><span class="meta">${String(i + 1).padStart(2, "0")}</span><span class="h3">${x}</span></div>`).join("")}
-      <p class="meta" style="margin:28px 0 10px">Estados del filtro</p><div class="filters" style="margin:0"><span class="fbtn">Por defecto</span><span class="fbtn" style="background:rgba(243,242,238,.14)">Hover</span><span class="fbtn" style="background:var(--screen);color:var(--night)">Activo</span><span class="fbtn" style="outline:3px solid currentColor;outline-offset:3px">Foco</span><span class="fbtn" style="opacity:.3">Desactivado</span></div></div>
+    <div class="meta-row g meta"><span>Sistema</span><span>Sistema de diseño del portfolio</span><span>Retícula visible: tecla G</span></div>
+    <h1 id="h-sy" tabindex="-1"><span class="sr">Sistema de diseño</span><span aria-hidden="true">${fitLine("SISTEMA", "mega", "w")}</span></h1>
+    <div class="g sy-intro"><p class="bl">Las reglas con las que está hecho este portfolio. Cada página sale de aquí: gramática, tipografía, color, retícula, movimiento y componentes.</p></div>
+    <div class="sec"><h2 class="meta">Gramática</h2>${["El texto grande solo sangra por la derecha. La primera letra siempre se lee.", "Tres colores activos como máximo: fondo, tinta e imagen. El color lo pone el proyecto.", "Una sola diagonal: la de la claqueta, a 45°.", "Las imágenes van a sangre o sobre la retícula; los desplazamientos, en múltiplos de dos columnas.", "Cortes secos entre colores, nunca fundidos. El movimiento entra en horizontal.", "El texto solo pisa imagen en la portada, en modo diferencia."].map((r, i) => `<div class="row"><span class="meta">Regla ${i + 1}</span><span class="bl" style="max-width:none">${r}</span></div>`).join("")}</div>
+    <div class="sec"><h2 class="meta">Tipografía</h2>${T.map(t => `<div class="row"><span class="meta">${t[0]}<br><span style="opacity:.6">${t[2]}</span></span><span class="s ${t[1]}">${t[3]}</span></div>`).join("")}</div>
+    <div class="sec"><h2 class="meta">Color</h2><div class="swb">${cols.map(c => `<div style="background:${c[1]};color:${c[2]};box-shadow:inset 0 0 0 1px rgba(243,242,238,.2)"><span class="meta">${esc(c[3])}</span><b>${esc(c[0])}</b><span class="meta">${c[1]} / ${c[2]}</span></div>`).join("")}</div><p class="meta" style="margin-top:12px">${crNote}</p></div>
+    <div class="sec"><h2 class="meta">Retícula</h2><div class="gbars">${[["Escritorio ≥ 1100 px", 16, "12px", "24 px"], ["Tableta 700–1099 px", 8, "12px", "20 px"], ["Móvil < 700 px", 4, "10px", "16 px"]].map(r => `<div><p class="meta" style="margin:0 0 8px">${r[0]} · ${r[1]} columnas · medianil ${r[2]} · margen ${r[3]} · sin ancho máximo</p><div class="bar" style="grid-template-columns:repeat(${r[1]},1fr);--g:${r[2]}">${"<i></i>".repeat(r[1])}</div></div>`).join("")}</div></div>
+    <div class="sec"><h2 class="meta">Movimiento</h2>${[["Cola de arranque", "La primera visita abre con una cuenta atrás de proyección (3·2·1, 1,8 s) que sale con una cortinilla horizontal. Se puede saltar y solo aparece una vez por sesión."], ["Título que se abre", "Cada línea ajustada busca su anchura (eje wdth 50–150) hasta llenar la caja. 700 ms."], ["Proyector", "Las portadas cambian con corte seco cada 3 s, con barra de avance, destello de cambio de rollo y grano. Se puede pausar; con «reducir movimiento» no avanza solo."], ["Scroll", "Títulos y bloques entran desde la derecha; las imágenes se descubren con una cortinilla horizontal; los datos entran con un corte seco escalonado."], ["Índice", "Al pasar el ratón la fila se inunda con el color del proyecto y el título se ensancha."], ["Transición", "Cortinilla en el color del destino (~460 ms); la portada viaja a su sitio en la ficha."]].map(r => `<div class="row"><span class="meta">${r[0]}</span><span class="b">${r[1]}</span></div>`).join("")}</div>
+    <div class="sec"><h2 class="meta">Componentes</h2>${["Cabecera con código de tiempo y barra de progreso", "Bloque ajustado (fitbox)", "Proyector", "Rollo de proyecto (una variante por proyecto)", "Fila de índice con inundación de color", "Filtro", "Claqueta", "Bloque de texto", "Tira de contactos", "Especificación", "Bandas de color", "Cita ajustada", "Siguiente rollo", "Contacto"].map((x, i) => `<div class="row"><span class="meta">${String(i + 1).padStart(2, "0")}</span><span class="h3">${x}</span></div>`).join("")}
+      <h3 class="meta" style="margin:28px 0 10px">Estados del filtro</h3><div class="filters" style="margin:0"><span class="fbtn">Por defecto</span><span class="fbtn" style="background:rgba(243,242,238,.14)">Hover</span><span class="fbtn" style="background:var(--screen);color:var(--night)">Activo</span><span class="fbtn" style="outline:3px solid currentColor;outline-offset:3px">Foco</span><span class="fbtn" style="opacity:.3">Desactivado</span></div></div>
     <div style="height:var(--sec)"></div>
   </section>`;
 }
+
+/* ---------- cabecera, menú y pie: nombre y contacto desde data.js (el HTML lleva los mismos valores como respaldo) ---------- */
+$$("[data-fullname]").forEach(el => { el.textContent = NAME; });
+$$("[data-year]").forEach(el => { if (S.year) el.textContent = S.year; });
+$$("[data-availability]").forEach(el => { if (S.availability) el.textContent = S.availability; });
+$$("[data-email]").forEach(a => { a.href = "mailto:" + S.email; a.textContent = S.email; });
+$$("[data-linkedin]").forEach(a => { if (LI) a.href = LI; else a.remove(); });
 
 /* ---------- ajuste tipográfico ---------- */
 function fitGroup(g) {
@@ -734,7 +844,7 @@ function render(fromNav) {
   lastKey = r.key;
   clearInterval(projTimer);
   main.innerHTML = r.view();
-  document.title = r.project ? `${r.project.title} · Arturo` : ({ "": "Arturo, Sala", trabajo: "Trabajo · Arturo", "sobre-mi": "Sobre mí · Arturo", contacto: "Contacto · Arturo", sistema: "Sistema · Arturo" })[r.key];
+  document.title = !r.project && r.key === "" ? `${NAME} · ${S.practice}` : `${r.project ? r.project.title : ({ trabajo: "Trabajo", "sobre-mi": "Sobre mí", contacto: "Contacto", sistema: "Sistema de diseño" })[r.key]} · ${NAME}, dirección de arte`;
   const navKey = r.project ? "trabajo" : r.key;
   $$(".nav a, .menu a, .ft a[data-link]").forEach(a => { const k = a.getAttribute("href").slice(1); if (k === navKey) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
   if (fromNav) { window.scrollTo(0, 0); const h = main.querySelector("h1"); if (h) { h.setAttribute("tabindex", "-1"); h.focus({ preventScroll: true }); } }
@@ -742,6 +852,7 @@ function render(fromNav) {
   if (document.fonts && document.fonts.load) Promise.race([Promise.all([document.fonts.load('900 100px "Anybody"'), document.fonts.load('400 16px "DM Mono"')]), new Promise(r => setTimeout(r, 1500))]).then(run, run); else run();
   bind(r);
   curHB = ""; requestAnimationFrame(watchColors);
+  document.dispatchEvent(new CustomEvent("sala:render", { detail: { key: r.key, project: r.project ? r.project.slug : null, fromNav: !!fromNav } }));
 }
 function go(hash, srcImg) {
   const target = hash || "#";
@@ -750,7 +861,8 @@ function go(hash, srcImg) {
   if (!document.startViewTransition || reduced) return update();
   if (srcImg) srcImg.style.viewTransitionName = "cover";
   const t = document.startViewTransition(() => { if (srcImg) srcImg.style.viewTransitionName = ""; update(); const r = resolve(); if (srcImg && r.project) { const h = main.querySelector(`[data-vt="${r.project.slug}"]`); if (h) h.style.viewTransitionName = "cover"; } });
-  t.finished.finally(() => $$("[data-vt]").forEach(i => i.style.viewTransitionName = ""));
+  t.ready.catch(() => {}); t.updateCallbackDone.catch(() => {});
+  t.finished.catch(() => {}).finally(() => $$("[data-vt]").forEach(i => i.style.viewTransitionName = ""));
 }
 document.addEventListener("click", e => {
   const a = e.target.closest("a[data-link]");
@@ -794,8 +906,9 @@ function bind(r) {
   if (pj) {
     const im = pj.querySelector("img"), lab = $("#pjLabel"), btn = $("#pjBtn");
     let i = 0, playing = !reduced;
-    const show = k => { const p = P[k]; im.src = `img/${p.cover}-1440.webp`; im.srcset = ""; im.style.background = IM[p.cover].edge || IM[p.cover].bg; im.style.objectPosition = IA[p.cover].pos; lab.textContent = `${p.n2}/06 · ${up(p.title)}`; };
-    P.forEach(p => { const pre = new Image(); pre.src = `img/${p.cover}-720.webp`; });
+    const pw = pj.clientWidth * (devicePixelRatio || 1) > 760 ? 1440 : 720;
+    const show = k => { const p = P[k]; im.src = `img/${p.cover}-${pw}.webp`; im.srcset = ""; im.style.background = IM[p.cover].edge || IM[p.cover].bg; im.style.objectPosition = IA[p.cover].pos; lab.textContent = `${p.n2}/${NT} · ${up(p.title)}`; };
+    P.forEach(p => { const pre = new Image(); pre.src = `img/${p.cover}-${pw}.webp`; });
     const start = () => { clearInterval(projTimer); projTimer = setInterval(() => { i = (i + 1) % P.length; show(i); }, 3000); };
     const setBtn = () => { btn.textContent = playing ? "Pausa" : "Reproducir"; btn.setAttribute("aria-pressed", String(!playing)); };
     btn.addEventListener("click", () => { playing = !playing; setBtn(); if (playing) start(); else clearInterval(projTimer); });
@@ -851,10 +964,13 @@ if (fine) {
   addEventListener("blur", () => cur.classList.remove("on"));
 }
 
+window.SALA = { go, fitAll, render, reduced, fine };
 render(false);
 if (location.hash && location.hash !== "#") { const h = main.querySelector("h1"); if (h) h.focus({ preventScroll: true }); }
 })();
 </script>
+<script src="js/intro.js"></script>
+<script src="js/motion.js"></script>
 
 </body>
 </html>

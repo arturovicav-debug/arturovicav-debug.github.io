@@ -1,18 +1,30 @@
 /* Contenido del portfolio. Para añadir un proyecto: añade sus imágenes a img/ (720 y 1440 px, .webp),
-   su entrada en "images" y un objeto en "projects". Nada más cambia. */
+   su entrada en "images" y un objeto en "projects". Nada más cambia: los contadores (01/06, «6 proyectos»)
+   y el rango de años se calculan solos.
+   Nombre: "name" es la marca corta (logotipo); "fullName" es el nombre completo que aparece en títulos,
+   pie, «Sobre mí» y contacto. Cambia "fullName" aquí para añadir los apellidos en todo el sitio.
+   Herramientas y experiencia: rellena "tools" y "about.experience" (rol, empresa, nota) y aparecerán solas en
+   «Sobre mí». Vacías no se muestran. */
 window.PF = {
  "site": {
   "name": "Arturo",
+  "fullName": "Arturo",
   "practice": "Dirección de arte y concepto",
   "email": "arturo.vic.av@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/arturo-vicioso-%C3%A1vila-ab094b353/",
   "availability": "Disponible para incorporarse a agencia o estudio",
   "year": 2026,
-  "socials": [],
+  "socials": [
+   {
+    "label": "LinkedIn",
+    "url": "https://www.linkedin.com/in/arturo-vicioso-%C3%A1vila-ab094b353/"
+   }
+  ],
   "tools": [],
   "a": {
    "statement": "Una <em>idea</em>, una <em>imagen</em> y el sistema que las sostiene.",
    "intro": "Arturo trabaja en dirección de arte y concepto. Construye identidades a partir de una idea que se pueda decir en una frase y la convierte en sistema: logotipo, tipografía, color, imagen y reglas de uso.",
-   "introMargin": "Seis proyectos de identidad, campaña y cartelería. Todos propios.",
+   "introMargin": "Proyectos de identidad, campaña y cartelería. Todos propios.",
    "description": "Archivo de dirección de arte y concepto de Arturo: identidad visual, campaña, cartelería y packaging."
   },
   "b": {
@@ -21,7 +33,7 @@ window.PF = {
     "se ve",
     "se decide."
    ],
-   "intro": "Hago marcas desde el concepto hasta el último plano. Decido qué se ve, cómo se ve y qué se queda fuera. Vengo del marketing, así que antes de dibujar pregunto.",
+   "intro": "Hago marcas desde el concepto hasta el último plano: decido qué se ve, cómo se ve y qué se queda fuera. Vengo del marketing, así que antes de dibujar, pregunto.",
    "description": "Arturo. Dirección de arte y concepto: identidad, campaña, cartelería y packaging.",
    "statementText": "Lo que se ve, se decide."
   }
@@ -35,9 +47,11 @@ window.PF = {
    ]
   },
   "b": {
-   "lede": "Trabajo el concepto de las marcas: la idea, la imagen y las reglas que las mantienen juntas.",
+   "lede": "Hago dirección de arte y concepto desde la estrategia: antes de decidir cómo se ve una marca, decido qué tiene que decir y a quién.",
    "body": [
-    "Vengo del marketing y la investigación de mercados. Por eso empiezo por el público y el contexto."
+    "Vengo del marketing. Estudié Marketing e Investigación de Mercados en la Universidad de Sevilla y empiezo cada proyecto por el mismo sitio: el público, el contexto y la pregunta que la marca tiene que responder. Después llega la imagen.",
+    "Eso es lo que aporto a un equipo creativo: ideas que caben en una frase y sistemas visuales que se pueden defender delante de un cliente.",
+    "Los proyectos de esta web son propios: identidad, personajes de marca, cartelería y campaña, planteados como si hubiera un cliente al otro lado. Ahora quiero hacerlo con uno de verdad, dentro de una agencia o un estudio."
    ]
   },
   "expertise": [
@@ -277,7 +291,7 @@ window.PF = {
    "slug": "aisu",
    "num": "001",
    "title": "Aisu.",
-   "kind": "Marca de moda masculina",
+   "kind": "Identidad y campaña para moda masculina",
    "year": 2026,
    "client": "Proyecto propio",
    "context": "Marca conceptual",
@@ -426,7 +440,7 @@ window.PF = {
    "slug": "la-garita",
    "num": "002",
    "title": "La Garita",
-   "kind": "Carteles de película",
+   "kind": "Campaña de cartelería para una película",
    "year": 2026,
    "client": "Proyecto propio",
    "context": "Cartelería de cine",
@@ -454,7 +468,8 @@ window.PF = {
     "lede": "Proyecto propio: main poster y teaser poster para una película, cuatro carteles en total. Un bloque tipográfico fijo y una imagen que cambia de registro."
    },
    "b": {
-    "hook": "Quien mira y quien es mirado."
+    "hook": "Quien mira y quien es mirado.",
+    "lead": "Cartel teaser y cartel principal para una película, cuatro carteles en total. Un bloque tipográfico fijo y una imagen que cambia de registro."
    },
    "blocks": [
     {
@@ -579,13 +594,14 @@ window.PF = {
     "lede": "Una marca de surf que prefiere la madera al neopreno. Un símbolo de un solo trazo y un nombre pintado a pincel."
    },
    "b": {
-    "hook": "Hecha a mano, como sus tablas."
+    "hook": "Hecha a mano, como sus tablas.",
+    "lead": "Una marca de surf que prefiere la madera al neopreno. Un símbolo de un solo trazo y un nombre rotulado a pincel."
    },
    "blocks": [
     {
      "t": "text",
      "label": "Introducción",
-     "body": "Gaviota es una marca de surf que prefiere la madera al neopreno. Su identidad está hecha a mano, como sus tablas."
+     "body": "Gaviota es una marca de surf de tablas hechas a mano. Su identidad tenía que funcionar sobre madera, sobre cartón y en la señalética de la playa."
     },
     {
      "t": "text",
@@ -650,7 +666,7 @@ window.PF = {
    "slug": "eggs",
    "num": "004",
    "title": "Eggs",
-   "kind": "Marca de desayunos y fast food",
+   "kind": "Identidad y packaging para desayunos",
    "year": 2025,
    "client": "Proyecto propio",
    "context": "Restauración",
@@ -673,17 +689,17 @@ window.PF = {
     "ink": "#141412"
    },
    "a": {
-    "lede": "Una marca de desayunos y fast food con un pilar fundamental: los huevos."
+    "lede": "Una marca de desayunos y fast food con un pilar: el huevo. En lugar de fotografía de comida, un personaje y un único amarillo."
    },
    "b": {
-    "hook": "Una marca de desayunos y fast food con un pilar fundamental: los huevos.",
-    "lead": "Una marca de desayunos y fast food con un pilar fundamental: los huevos."
+    "hook": "Un producto cotidiano convertido en personaje.",
+    "lead": "Una marca de desayunos y fast food con un pilar: el huevo. En lugar de fotografía de comida, un personaje y un único amarillo."
    },
    "blocks": [
     {
      "t": "text",
      "label": "Introducción",
-     "body": "El desayuno es la comida más importante del día, y el huevo tiene un valor nutricional a la altura."
+     "body": "Eggs es una marca de desayunos y fast food construida alrededor de un solo producto: el huevo. Su identidad tenía que funcionar en un envase para llevar y en el rótulo de la fachada."
     },
     {
      "t": "image",
@@ -692,8 +708,13 @@ window.PF = {
     },
     {
      "t": "text",
+     "label": "El reto",
+     "body": "Hacer memorable un producto cotidiano sin recurrir a la fotografía de comida."
+    },
+    {
+     "t": "text",
      "label": "La idea",
-     "body": "Hacer memorable un producto cotidiano sin recurrir a la fotografía de comida. El producto se convierte en personaje: la yema tiene cara y las letras tienen la misma textura blanda que la clara."
+     "body": "El producto se convierte en personaje: la yema tiene cara y las letras tienen la misma textura blanda que la clara."
     },
     {
      "t": "spec",
@@ -729,7 +750,7 @@ window.PF = {
    "slug": "verde",
    "num": "005",
    "title": "Verde",
-   "kind": "Identidad para una marca de cuidado de plantas",
+   "kind": "Identidad para el cuidado de plantas",
    "year": 2026,
    "client": "Proyecto propio",
    "context": "Productos para plantas y macetas",
@@ -761,13 +782,14 @@ window.PF = {
     "lede": "Todo el sistema nace de un personaje: una pequeña mata verde con ojos grandes."
    },
    "b": {
-    "hook": "Personaje pequeño. Sistema grande."
+    "hook": "Personaje pequeño. Sistema grande.",
+    "lead": "Todo el sistema nace de un personaje: una pequeña mata verde con ojos grandes. A su alrededor, logotipo, paleta, patrón y aplicaciones."
    },
    "blocks": [
     {
      "t": "text",
      "label": "Introducción",
-     "body": "Verde es una marca de productos para que tus plantas y macetas crezcan mejor. Su branding nace del mismo fin que la marca: el color, las formas orgánicas y un tono optimista hablan de plantas que crecen fuertes y sanas."
+     "body": "Verde es una marca de productos para que las plantas y las macetas crezcan mejor. Su identidad habla de lo mismo que vende: color, formas orgánicas y un tono optimista, como una planta que crece fuerte y sana."
     },
     {
      "t": "image",
@@ -897,7 +919,8 @@ window.PF = {
     "lede": "Cosas buenas, todos los días. Un logotipo con personaje y el manual que lo mantiene en su sitio."
    },
    "b": {
-    "hook": "Good things. Everyday."
+    "hook": "Good things. Everyday.",
+    "lead": "Un logotipo con personaje para una marca de hostelería y el manual que lo mantiene en su sitio: versiones, uso sobre color y aplicaciones."
    },
    "blocks": [
     {
