@@ -28,4 +28,8 @@ Abre `data.js`, busca la frase y cámbiala solo dentro de las comillas. Guarda y
 
 Los vídeos se reproducen en bucle y sin sonido al entrar en pantalla y se pausan al salir; cada uno tiene botones de sonido y pausa.
 
+## Vista previa al compartir el enlace
+
+`og-image.jpg` (1200×630) es la tarjeta que muestran LinkedIn, WhatsApp o X al pegar el enlace; las etiquetas `og:` y `twitter:` del `<head>` de `index.html` la apuntan con su URL completa. Si cambias la imagen o los textos, pega el enlace en [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) para que LinkedIn deje de usar la versión que tiene guardada.
+
 Rutas: `#trabajo`, `#sobre-mi`, `#contacto` y una por proyecto (`#aisu`, `#la-garita`, `#gaviota`, `#eggs`, `#verde`, `#miso`).
