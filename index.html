@@ -297,6 +297,16 @@ main{overflow-x:clip;display:block;padding-top:calc(var(--head) + env(safe-area-
 .fg.inset{--c:6/12;--ct:3/7;--cm:1/-1}
 .fg.bleed{margin-inline:calc(var(--mar) * -1)}
 .fg.bleed figcaption{padding-inline:var(--mar)}
+/* vídeo de proyecto: bucle mudo al entrar en pantalla; el sonido y la pausa los decide quien mira */
+.vid .fr{background:#0B0B0A}
+.vid video{display:block;width:100%;height:100%;object-fit:cover;cursor:pointer}
+.vid .vctl{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:end;gap:12px;padding:12px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:var(--screen);pointer-events:none}
+.vid .vctl>span:first-child{text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.vid .vbtns{display:flex;gap:6px;pointer-events:auto}
+.vid .vbtns button{border:1.5px solid currentColor;padding:8px 10px;min-height:36px;background:rgba(11,11,10,.35);transition:background-color var(--d1),color var(--d1)}
+.vid .vbtns button:hover,.vid .vbtns button[aria-pressed="true"]{background:var(--screen);color:var(--night)}
+.vid .vbar{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--screen);transform-origin:left;transform:scaleX(0);pointer-events:none}
+@media (max-width:699px){.vid .vctl>span:first-child{display:none}.vid .vctl{justify-content:flex-end;padding:8px}}
 .pairb{row-gap:var(--gut)}
 /* pareja a la misma altura: cada imagen ocupa el ancho que le da su proporción */
 .paireq{display:flex;gap:var(--gut);align-items:flex-start}
@@ -453,7 +463,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 <script>
 (() => {
 "use strict";
-const D = window.PF, P = D.projects, S = D.site, IM = D.img, IA = D.images;
+const D = window.PF, P = D.projects, S = D.site, IM = D.img, IA = D.images, VD = D.videos || {};
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const fine = matchMedia("(hover:hover) and (pointer:fine)").matches;
 P.forEach((p, i) => { p.i = i; p.prev = P[(i - 1 + P.length) % P.length]; p.next = P[(i + 1) % P.length]; p.n2 = String(i + 1).padStart(2, "0"); });
@@ -593,6 +603,10 @@ function bBlock(p, b, n, st) {
       b.text.split(" ").forEach(w => { cur = cur ? cur + " " + w : w; if (cur.length >= target) { lines.push(cur); cur = ""; } });
       if (cur) { if (lines.length && cur.length < 5) lines[lines.length - 1] += " " + cur; else lines.push(cur); }
       return `<blockquote class="qb" style="margin-inline:0"><p class="sr">${esc(b.text)}</p><div class="fitgroup" data-maxvh="85" aria-hidden="true">${lines.map(l => fitLine(esc(up(l)), "dxl", "w")).join("")}</div></blockquote>`; }
+    case "video": {
+      const m = VD[b.v]; if (!m) return "";
+      const bleed = b.size === "bleed";
+      return `<div class="${bleed ? "" : "g"} wipe"><figure class="fg vid ${bleed ? "bleed" : "full"}"><div class="fr" style="aspect-ratio:${m.w}/${m.h}"><video muted loop playsinline preload="none" poster="video/${b.v}.webp" width="${m.w}" height="${m.h}" aria-label="${esc(m.title)}: vídeo"><source src="video/${b.v}.mp4" type="video/mp4"></video><div class="vctl meta"><span>▶ ${esc(up(m.title))} · ${m.dur}</span><span class="vbtns"><button type="button" data-v="sound" aria-pressed="false">Sonido: no</button><button type="button" data-v="play" aria-pressed="false">Pausa</button></span></div><span class="vbar" aria-hidden="true"></span></div><figcaption class="meta">${String(++st.f).padStart(2, "0")} — ${esc(m.cap)}</figcaption></figure></div>`; }
     case "spec": return `<section class="sp g"><h2 class="meta">${esc(b.label)}</h2><dl>${b.items.map(it => `<div><dt>${esc(it.k)}</dt><dd>${esc(it.v)}</dd></div>`).join("")}</dl></section>`;
     case "palette": return `<section class="bands" aria-label="Paleta">${b.colors.map(c => { const L = lum(c.hex); const ink = L > .4 ? "#0B0B0A" : "#F3F2EE"; return `<div class="band" style="background:${c.hex};color:${ink}"><span class="nm">${esc(c.name)}</span><span class="hx meta">${c.hex.toUpperCase()} · RGB ${rgb(c.hex)}</span></div>`; }).join("")}</section>`;
   }
@@ -669,7 +683,7 @@ function system() {
     <div class="sec"><p class="meta">Color</p><div class="swb">${cols.map(c => `<div style="background:${c[1]};color:${c[2]};box-shadow:inset 0 0 0 1px rgba(243,242,238,.2)"><span class="meta">${c[3]}</span><b>${esc(c[0])}</b><span class="meta">${c[1]} / ${c[2]}</span></div>`).join("")}</div><p class="meta" style="margin-top:12px">Contraste de las parejas fondo/tinta: de 5,8 : 1 (Gaviota) a 11,6 : 1 (Eggs). Sala/pantalla: 17,6 : 1. Todas cumplen WCAG AA.</p></div>
     <div class="sec"><p class="meta">Retícula</p><div class="gbars">${[["Escritorio ≥ 1100 px", 16, "12px", "24 px"], ["Tableta 700–1099 px", 8, "12px", "20 px"], ["Móvil < 700 px", 4, "10px", "16 px"]].map(r => `<div><p class="meta" style="margin:0 0 8px">${r[0]} · ${r[1]} columnas · medianil ${r[2]} · margen ${r[3]} · sin ancho máximo</p><div class="bar" style="grid-template-columns:repeat(${r[1]},1fr);--g:${r[2]}">${"<i></i>".repeat(r[1])}</div></div>`).join("")}</div></div>
     <div class="sec"><p class="meta">Movimiento</p>${[["Título que se abre", "Cada línea ajustada busca su anchura (eje wdth 50–150) hasta llenar la caja. 700 ms."], ["Proyector", "Las portadas cambian con corte seco cada 3 s. Se puede pausar; con «reducir movimiento» no avanza solo."], ["Scroll", "Títulos y bloques entran desde la derecha; las imágenes se descubren con una cortinilla horizontal."], ["Índice", "Al pasar el ratón la fila se inunda con el color del proyecto y el título se ensancha."], ["Transición", "Cortinilla de 380 ms entre páginas; la portada viaja a su sitio en la ficha."]].map(r => `<div class="row"><span class="meta">${r[0]}</span><span class="b">${r[1]}</span></div>`).join("")}</div>
-    <div class="sec"><p class="meta">Componentes</p>${["Cabecera con código de tiempo y barra de progreso", "Bloque ajustado (fitbox)", "Proyector", "Rollo de proyecto (6 variantes)", "Fila de índice con inundación de color", "Filtro", "Claqueta", "Bloque de texto", "Tira de contactos", "Especificación", "Bandas de color", "Cita ajustada", "Siguiente rollo", "Contacto"].map((x, i) => `<div class="row"><span class="meta">${String(i + 1).padStart(2, "0")}</span><span class="h3">${x}</span></div>`).join("")}
+    <div class="sec"><p class="meta">Componentes</p>${["Cabecera con código de tiempo y barra de progreso", "Bloque ajustado (fitbox)", "Proyector", "Rollo de proyecto (6 variantes)", "Fila de índice con inundación de color", "Filtro", "Claqueta", "Bloque de texto", "Tira de contactos", "Especificación", "Bandas de color", "Cita ajustada", "Siguiente rollo", "Vídeo de proyecto (bucle mudo, sonido a petición)", "Contacto"].map((x, i) => `<div class="row"><span class="meta">${String(i + 1).padStart(2, "0")}</span><span class="h3">${x}</span></div>`).join("")}
       <p class="meta" style="margin:28px 0 10px">Estados del filtro</p><div class="filters" style="margin:0"><span class="fbtn">Por defecto</span><span class="fbtn" style="background:rgba(243,242,238,.14)">Hover</span><span class="fbtn" style="background:var(--screen);color:var(--night)">Activo</span><span class="fbtn" style="outline:3px solid currentColor;outline-offset:3px">Foco</span><span class="fbtn" style="opacity:.3">Desactivado</span></div></div>
     <div style="height:var(--sec)"></div>
   </section>`;
@@ -728,6 +742,7 @@ function render(fromNav) {
   if (r.key === lastKey && fromNav !== "force") return;
   lastKey = r.key;
   clearInterval(projTimer);
+  $$("video", main).forEach(v => { try { v.pause(); } catch (e) {} });
   main.innerHTML = r.view();
   document.title = r.project ? `${r.project.title} · Arturo` : ({ "": "Arturo, Sala", trabajo: "Trabajo · Arturo", "sobre-mi": "Sobre mí · Arturo", contacto: "Contacto · Arturo", sistema: "Sistema · Arturo" })[r.key];
   const navKey = r.project ? "trabajo" : r.key;
@@ -808,6 +823,40 @@ function bind(r) {
     $$(".fbtn").forEach(b => b.addEventListener("click", () => apply(b.dataset.f)));
     apply(store.get("filter", "todo"));
   }
+  bindVideos();
+}
+
+/* vídeos de proyecto: bucle mudo en pantalla, pausa fuera; el sonido se pide y nunca suenan dos a la vez */
+let vidIO = null;
+function bindVideos() {
+  if (vidIO) { vidIO.disconnect(); vidIO = null; }
+  const figs = $$("figure.vid", main); if (!figs.length) return;
+  const all = figs.map(f => {
+    const v = f.querySelector("video"), bs = f.querySelector('[data-v="sound"]'), bp = f.querySelector('[data-v="play"]'), bar = f.querySelector(".vbar");
+    const st = { f, v, user: reduced ? "paused" : "", raf: 0 };
+    const setP = () => { const on = !v.paused; bp.textContent = on ? "Pausa" : "Reproducir"; bp.setAttribute("aria-pressed", String(!on)); v.dataset.cursor = on ? "Pausa" : "Reproducir"; };
+    st.setS = () => { bs.textContent = v.muted ? "Sonido: no" : "Sonido: sí"; bs.setAttribute("aria-pressed", String(!v.muted)); };
+    st.play = () => { const pr = v.play(); if (pr && pr.catch) pr.catch(setP); };
+    const tick = () => { if (v.paused || !v.isConnected) { st.raf = 0; return; } bar.style.transform = `scaleX(${v.duration ? v.currentTime / v.duration : 0})`; st.raf = requestAnimationFrame(tick); };
+    v.addEventListener("play", () => { setP(); if (!st.raf) st.raf = requestAnimationFrame(tick); });
+    v.addEventListener("pause", setP);
+    const toggle = () => { if (v.paused) { st.user = ""; st.play(); } else { st.user = "paused"; v.pause(); } };
+    bp.addEventListener("click", toggle); v.addEventListener("click", toggle);
+    bs.addEventListener("click", () => {
+      const turnOn = v.muted;
+      if (turnOn) all.forEach(o => { if (o !== st && !o.v.muted) { o.v.muted = true; o.setS(); } });
+      v.muted = !turnOn; st.setS();
+      if (turnOn && v.paused) { st.user = ""; st.play(); }
+    });
+    setP(); st.setS();
+    return st;
+  });
+  vidIO = new IntersectionObserver(es => es.forEach(e => {
+    const st = all.find(o => o.f === e.target); if (!st) return;
+    const vis = e.isIntersecting && e.intersectionRatio >= .35;
+    if (vis && !st.user && st.v.paused) st.play(); else if (!vis && !st.v.paused) st.v.pause();
+  }), { threshold: [0, .35, .6] });
+  figs.forEach(f => vidIO.observe(f));
 }
 
 /* menú */

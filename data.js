@@ -750,7 +750,8 @@ window.PF = {
     "Paleta",
     "Tipografía",
     "Patrón",
-    "Aplicaciones de marca"
+    "Aplicaciones de marca",
+    "Motion graphics"
    ],
    "cover": "verde-01",
    "color": {
@@ -860,6 +861,21 @@ window.PF = {
     },
     {
      "t": "text",
+     "label": "En movimiento",
+     "body": "El sistema también se mueve. Una presentación de marca en la que todo nace del personaje y un spot de quince segundos para el público general."
+    },
+    {
+     "t": "video",
+     "v": "verde-005",
+     "size": "bleed"
+    },
+    {
+     "t": "video",
+     "v": "verde-spot",
+     "size": "full"
+    },
+    {
+     "t": "text",
      "label": "Cierre",
      "body": "Un personaje reconocible en veinte píxeles y en un cartel de dos metros. El resto del sistema está ahí para que siempre se vea igual de bien."
     }
@@ -886,7 +902,8 @@ window.PF = {
     "Logotipo y versiones",
     "Uso sobre color",
     "Manual básico",
-    "Aplicaciones"
+    "Aplicaciones",
+    "Motion graphics"
    ],
    "cover": "miso-00",
    "color": {
@@ -963,12 +980,45 @@ window.PF = {
     },
     {
      "t": "text",
+     "label": "En movimiento",
+     "body": "Una sola línea continua dibuja el día de Miso y termina siendo el trazo de la cabeza del isotipo. A una tinta, sin sombras ni degradados, como el manual."
+    },
+    {
+     "t": "video",
+     "v": "miso-una-linea",
+     "size": "bleed"
+    },
+    {
+     "t": "text",
      "label": "Cierre",
      "body": "Un manual corto para una marca que tiene que funcionar todos los días."
     }
    ]
   }
  ],
+ "videos": {
+  "verde-005": {
+   "title": "005 · Verde",
+   "cap": "Presentación de marca. Todo el sistema nace del personaje.",
+   "w": 1920,
+   "h": 1080,
+   "dur": "0:11"
+  },
+  "verde-spot": {
+   "title": "Verde · Spot",
+   "cap": "Spot de marca para el público general. «Better things grow here.»",
+   "w": 1920,
+   "h": 1080,
+   "dur": "0:15"
+  },
+  "miso-una-linea": {
+   "title": "Miso · Una sola línea",
+   "cap": "Una línea continua dibuja el día de Miso y termina en el isotipo.",
+   "w": 1920,
+   "h": 1080,
+   "dur": "0:15"
+  }
+ },
  "img": {
   "aisu-01": {
    "w": 1774,
