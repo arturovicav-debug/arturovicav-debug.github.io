@@ -274,283 +274,8 @@ window.PF = {
  },
  "projects": [
   {
-   "slug": "aisu",
-   "num": "001",
-   "title": "Aisu.",
-   "kind": "Marca de moda masculina",
-   "year": 2026,
-   "client": "Proyecto propio",
-   "context": "Marca conceptual",
-   "disciplines": [
-    "Identidad",
-    "Dirección de arte",
-    "Campaña"
-   ],
-   "filters": [
-    "identidad",
-    "direccion",
-    "campana"
-   ],
-   "services": [
-    "Logotipo",
-    "Papelería",
-    "Dirección de arte de campaña",
-    "Exterior"
-   ],
-   "cover": "aisu-01",
-   "color": {
-    "ground": "#465460",
-    "ink": "#F8F6EF"
-   },
-   "a": {
-    "lede": "Una marca de ropa que se mira de lejos. Planos abiertos, figuras pequeñas y una cursiva que atraviesa el horizonte."
-   },
-   "b": {
-    "hook": "La belleza que habita en el silencio de lo común.",
-    "lead": "Una marca de ropa que se mira de lejos. Planos abiertos, figuras pequeñas y una cursiva que atraviesa el horizonte."
-   },
-   "blocks": [
-    {
-     "t": "text",
-     "label": "Introducción",
-     "body": "Aisu. es una marca conceptual de moda masculina. Su campaña no enseña la ropa de cerca: la deja dentro de un gran plano general y espera a que el espectador la encuentre."
-    },
-    {
-     "t": "image",
-     "img": "aisu-02",
-     "size": "bleed"
-    },
-    {
-     "t": "text",
-     "label": "El reto",
-     "body": "La moda masculina suele hablar en primer plano: producto, textura, detalle. Aisu. necesitaba lo contrario, una marca que se entendiera a distancia y que transmitiera calma antes que catálogo."
-    },
-    {
-     "t": "pair",
-     "imgs": [
-      "aisu-03",
-      "aisu-03b"
-     ],
-     "fit": "eq"
-    },
-    {
-     "t": "image",
-     "img": "aisu-04",
-     "size": "bleed"
-    },
-    {
-     "t": "text",
-     "label": "La idea",
-     "body": "Encuadrar como el cine japonés de los noventa. Planos generales, horizontes bajos, tiempos muertos. La ropa aparece como parte de una escena cotidiana, casi por accidente."
-    },
-    {
-     "t": "quote",
-     "text": "La belleza que habita en el silencio de lo común."
-    },
-    {
-     "t": "text",
-     "label": "La estrategia",
-     "body": "La distancia se convierte en el tono de la marca. Cielos grises, hormigón, personajes que esperan. El logotipo acompaña esa quietud con una cursiva de alto contraste y un trazo largo que cruza la palabra como una línea de horizonte."
-    },
-    {
-     "t": "spec",
-     "label": "Identidad",
-     "items": [
-      {
-       "k": "Logotipo",
-       "v": "Cursiva de alto contraste con punto final. El trazo horizontal funciona como firma y como horizonte."
-      },
-      {
-       "k": "Tipografía",
-       "v": "Serif cursiva para la marca; sans en mayúsculas espaciadas para la información de temporada."
-      },
-      {
-       "k": "Color",
-       "v": "Tomado del propio paisaje: papel crudo, nube baja, hormigón y gabardina."
-      },
-      {
-       "k": "Fotografía",
-       "v": "Planos generales con el horizonte bajo. Los personajes nunca ocupan más de un tercio del encuadre."
-      }
-     ]
-    },
-    {
-     "t": "palette",
-     "colors": [
-      {
-       "name": "Papel crudo",
-       "hex": "#F8F6EF"
-      },
-      {
-       "name": "Nube baja",
-       "hex": "#89A0B7"
-      },
-      {
-       "name": "Hormigón",
-       "hex": "#676156"
-      },
-      {
-       "name": "Gabardina",
-       "hex": "#343330"
-      }
-     ]
-    },
-    {
-     "t": "image",
-     "img": "aisu-05",
-     "size": "wide"
-    },
-    {
-     "t": "image",
-     "img": "aisu-07",
-     "size": "bleed"
-    },
-    {
-     "t": "text",
-     "label": "Aplicaciones",
-     "body": "La campaña sale a la calle en el soporte más discreto posible: el panel de una marquesina. El cartel repite la escena que lo rodea."
-    },
-    {
-     "t": "image",
-     "img": "aisu-08",
-     "size": "full"
-    },
-    {
-     "t": "text",
-     "label": "Cierre",
-     "body": "Una marca que no pide atención. La gana por acumulación: cada imagen se parece a la anterior en el silencio, no en la pose."
-    }
-   ]
-  },
-  {
-   "slug": "la-garita",
-   "num": "002",
-   "title": "La Garita",
-   "kind": "Carteles de película",
-   "year": 2026,
-   "client": "Proyecto propio",
-   "context": "Cartelería de cine",
-   "disciplines": [
-    "Dirección de arte",
-    "Cartelería",
-    "Campaña"
-   ],
-   "filters": [
-    "direccion",
-    "campana"
-   ],
-   "services": [
-    "Concepto de campaña",
-    "Serie de carteles",
-    "Sistema tipográfico",
-    "Exterior"
-   ],
-   "cover": "lagarita-01",
-   "color": {
-    "ground": "#112C27",
-    "ink": "#F5CB17"
-   },
-   "a": {
-    "lede": "Proyecto propio: main poster y teaser poster para una película, cuatro carteles en total. Un bloque tipográfico fijo y una imagen que cambia de registro."
-   },
-   "b": {
-    "hook": "Quien mira y quien es mirado."
-   },
-   "blocks": [
-    {
-     "t": "text",
-     "label": "Introducción",
-     "body": "La Garita es una campaña de cartelería para una película: cuatro carteles y su adaptación a la vitrina de un cine."
-    },
-    {
-     "t": "text",
-     "label": "El reto",
-     "body": "Construir una campaña de estreno con la coherencia de una distribuidora real. Cada cartel tenía que funcionar solo y la serie completa tenía que contar la película sin desvelarla."
-    },
-    {
-     "t": "grid",
-     "imgs": [
-      "lagarita-02",
-      "lagarita-03",
-      "lagarita-04"
-     ],
-     "caption": "La serie: borde, superficie y cortina."
-    },
-    {
-     "t": "text",
-     "label": "La idea",
-     "body": "Una película de drama y suspense ambientada en el sur de España durante el verano: el momento y el lugar óptimos para que florezca la nostalgia y una mirada en perspectiva sobre el paso del tiempo."
-    },
-    {
-     "t": "quote",
-     "text": "Quien mira y quien es mirado."
-    },
-    {
-     "t": "text",
-     "label": "La estrategia",
-     "body": "La tipografía es la constante y la imagen, la variable. Un título condensado en amarillo ocupa siempre el mismo lugar mientras la fotografía pasa del cartel gráfico a pleno sol al primer plano nocturno bajo el agua."
-    },
-    {
-     "t": "spec",
-     "label": "Sistema",
-     "items": [
-      {
-       "k": "Tipografía",
-       "v": "Grotesca condensada muy pesada, compuesta en bloque y alineada a la izquierda."
-      },
-      {
-       "k": "Color",
-       "v": "Amarillo de señalización contra el verde oscuro del agua."
-      },
-      {
-       "k": "Composición",
-       "v": "Título arriba a la izquierda, créditos en columna en la esquina opuesta, fecha centrada al pie."
-      },
-      {
-       "k": "Imagen",
-       "v": "Luz de piscina, reflejos y cuerpos a medio sumergir."
-      }
-     ]
-    },
-    {
-     "t": "palette",
-     "colors": [
-      {
-       "name": "Amarillo señal",
-       "hex": "#F5CB17"
-      },
-      {
-       "name": "Agua",
-       "hex": "#112C27"
-      },
-      {
-       "name": "Negro noche",
-       "hex": "#040905"
-      }
-     ]
-    },
-    {
-     "t": "text",
-     "label": "Aplicaciones",
-     "body": "La serie en su contexto natural: la vitrina de un cine, entre los carteles de otros estrenos."
-    },
-    {
-     "t": "pair",
-     "imgs": [
-      "lagarita-07",
-      "lagarita-08"
-     ]
-    },
-    {
-     "t": "text",
-     "label": "Cierre",
-     "body": "Cuatro carteles con una sola voz. La serie se puede leer en cualquier orden y siempre parece la misma película."
-    }
-   ]
-  },
-  {
    "slug": "gaviota",
-   "num": "003",
+   "num": "001",
    "title": "Gaviota",
    "kind": "Identidad para una marca de surf",
    "year": 2026,
@@ -647,87 +372,122 @@ window.PF = {
    ]
   },
   {
-   "slug": "eggs",
-   "num": "004",
-   "title": "Eggs",
-   "kind": "Marca de desayunos y fast food",
-   "year": 2025,
+   "slug": "miso",
+   "num": "002",
+   "title": "Miso",
+   "kind": "Sistema de logotipo para hostelería",
+   "year": 2026,
    "client": "Proyecto propio",
-   "context": "Restauración",
+   "context": "Hostelería",
    "disciplines": [
     "Identidad",
-    "Packaging"
+    "Logotipo",
+    "Manual de marca"
    ],
    "filters": [
     "identidad",
-    "packaging"
+    "personaje"
    ],
    "services": [
-    "Logotipo",
-    "Packaging para llevar",
-    "Rótulo"
+    "Logotipo y versiones",
+    "Uso sobre color",
+    "Manual básico",
+    "Aplicaciones",
+    "Motion graphics"
    ],
-   "cover": "eggs-01",
+   "cover": "miso-00",
    "color": {
-    "ground": "#FDC518",
-    "ink": "#141412"
+    "ground": "#E1D4B4",
+    "ink": "#20201D"
    },
    "a": {
-    "lede": "Una marca de desayunos y fast food con un pilar fundamental: los huevos."
+    "lede": "Cosas buenas, todos los días. Un logotipo con personaje y el manual que lo mantiene en su sitio."
    },
    "b": {
-    "hook": "Una marca de desayunos y fast food con un pilar fundamental: los huevos.",
-    "lead": "Una marca de desayunos y fast food con un pilar fundamental: los huevos."
+    "hook": "Good things. Everyday."
    },
    "blocks": [
     {
      "t": "text",
      "label": "Introducción",
-     "body": "El desayuno es la comida más importante del día, y el huevo tiene un valor nutricional a la altura."
+     "body": "Miso es una marca de hostelería con un lema sencillo: cosas buenas, todos los días. Su identidad se presenta como un manual."
     },
     {
      "t": "image",
-     "img": "eggs-02",
+     "img": "miso-01",
      "size": "full"
     },
     {
      "t": "text",
-     "label": "La idea",
-     "body": "Hacer memorable un producto cotidiano sin recurrir a la fotografía de comida. El producto se convierte en personaje: la yema tiene cara y las letras tienen la misma textura blanda que la clara."
+     "label": "El reto",
+     "body": "Diseñar un logotipo con personaje que funcione igual de bien en una taza, una gorra o una fachada."
     },
     {
-     "t": "spec",
-     "label": "Identidad",
-     "items": [
+     "t": "text",
+     "label": "La idea",
+     "body": "Un pequeño personaje con cinta en la frente, construido con formas geométricas simples, junto a una palabra en minúsculas, redonda y pesada."
+    },
+    {
+     "t": "image",
+     "img": "miso-02",
+     "size": "wide"
+    },
+    {
+     "t": "text",
+     "label": "La estrategia",
+     "body": "La prioridad es la reproducción. Versión horizontal, versiones monocromáticas, una tinta, uso sobre color y errores que evitar: un sistema pensado para quien tenga que aplicarlo."
+    },
+    {
+     "t": "image",
+     "img": "miso-03",
+     "size": "full"
+    },
+    {
+     "t": "palette",
+     "colors": [
       {
-       "k": "Icono",
-       "v": "Una yema con cara mínima: dos ojos, una nariz y una boca."
+       "name": "Crema",
+       "hex": "#E1D4B4"
       },
       {
-       "k": "Letras",
-       "v": "Redondas y blandas, con contorno negro fino."
+       "name": "Verde oliva",
+       "hex": "#8D9A68"
       },
       {
-       "k": "Color",
-       "v": "Un único amarillo yema que ocupa toda la superficie."
+       "name": "Terracota",
+       "hex": "#C06639"
+      },
+      {
+       "name": "Negro",
+       "hex": "#20201D"
       }
      ]
     },
     {
      "t": "image",
-     "img": "eggs-03",
-     "size": "wide"
+     "img": "miso-04",
+     "size": "full"
+    },
+    {
+     "t": "text",
+     "label": "En movimiento",
+     "body": "Una sola línea continua dibuja el día de Miso y termina siendo el trazo de la cabeza del isotipo. A una tinta, sin sombras ni degradados, como el manual."
+    },
+    {
+     "t": "video",
+     "v": "miso-una-linea",
+     "size": "bleed"
     },
     {
      "t": "text",
      "label": "Cierre",
-     "body": "Un amarillo, un icono y una marca que se reconoce desde la otra acera."
+     "body": "Un manual corto para una marca que tiene que funcionar todos los días."
     }
    ]
   },
   {
    "slug": "verde",
-   "num": "005",
+   "num": "003",
    "title": "Verde",
    "kind": "Identidad para una marca de cuidado de plantas",
    "year": 2026,
@@ -882,116 +642,356 @@ window.PF = {
    ]
   },
   {
-   "slug": "miso",
-   "num": "006",
-   "title": "Miso",
-   "kind": "Sistema de logotipo para hostelería",
+   "slug": "aisu",
+   "num": "004",
+   "title": "Aisu.",
+   "kind": "Marca de moda masculina",
    "year": 2026,
    "client": "Proyecto propio",
-   "context": "Hostelería",
+   "context": "Marca conceptual",
    "disciplines": [
     "Identidad",
-    "Logotipo",
-    "Manual de marca"
+    "Dirección de arte",
+    "Campaña"
    ],
    "filters": [
     "identidad",
-    "personaje"
+    "direccion",
+    "campana"
    ],
    "services": [
-    "Logotipo y versiones",
-    "Uso sobre color",
-    "Manual básico",
-    "Aplicaciones",
-    "Motion graphics"
+    "Logotipo",
+    "Papelería",
+    "Dirección de arte de campaña",
+    "Exterior"
    ],
-   "cover": "miso-00",
+   "cover": "aisu-01",
    "color": {
-    "ground": "#E1D4B4",
-    "ink": "#20201D"
+    "ground": "#465460",
+    "ink": "#F8F6EF"
    },
    "a": {
-    "lede": "Cosas buenas, todos los días. Un logotipo con personaje y el manual que lo mantiene en su sitio."
+    "lede": "Una marca de ropa que se mira de lejos. Planos abiertos, figuras pequeñas y una cursiva que atraviesa el horizonte."
    },
    "b": {
-    "hook": "Good things. Everyday."
+    "hook": "La belleza que habita en el silencio de lo común.",
+    "lead": "Una marca de ropa que se mira de lejos. Planos abiertos, figuras pequeñas y una cursiva que atraviesa el horizonte."
    },
    "blocks": [
     {
      "t": "text",
      "label": "Introducción",
-     "body": "Miso es una marca de hostelería con un lema sencillo: cosas buenas, todos los días. Su identidad se presenta como un manual."
+     "body": "Aisu. es una marca conceptual de moda masculina. Su campaña no enseña la ropa de cerca: la deja dentro de un gran plano general y espera a que el espectador la encuentre."
     },
     {
      "t": "image",
-     "img": "miso-01",
-     "size": "full"
+     "img": "aisu-02",
+     "size": "bleed"
     },
     {
      "t": "text",
      "label": "El reto",
-     "body": "Diseñar un logotipo con personaje que funcione igual de bien en una taza, una gorra o una fachada."
+     "body": "La moda masculina suele hablar en primer plano: producto, textura, detalle. Aisu. necesitaba lo contrario, una marca que se entendiera a distancia y que transmitiera calma antes que catálogo."
+    },
+    {
+     "t": "pair",
+     "imgs": [
+      "aisu-03",
+      "aisu-03b"
+     ],
+     "fit": "eq"
+    },
+    {
+     "t": "image",
+     "img": "aisu-04",
+     "size": "bleed"
     },
     {
      "t": "text",
      "label": "La idea",
-     "body": "Un pequeño personaje con cinta en la frente, construido con formas geométricas simples, junto a una palabra en minúsculas, redonda y pesada."
+     "body": "Encuadrar como el cine japonés de los noventa. Planos generales, horizontes bajos, tiempos muertos. La ropa aparece como parte de una escena cotidiana, casi por accidente."
     },
     {
-     "t": "image",
-     "img": "miso-02",
-     "size": "wide"
+     "t": "quote",
+     "text": "La belleza que habita en el silencio de lo común."
     },
     {
      "t": "text",
      "label": "La estrategia",
-     "body": "La prioridad es la reproducción. Versión horizontal, versiones monocromáticas, una tinta, uso sobre color y errores que evitar: un sistema pensado para quien tenga que aplicarlo."
+     "body": "La distancia se convierte en el tono de la marca. Cielos grises, hormigón, personajes que esperan. El logotipo acompaña esa quietud con una cursiva de alto contraste y un trazo largo que cruza la palabra como una línea de horizonte."
     },
     {
-     "t": "image",
-     "img": "miso-03",
-     "size": "full"
+     "t": "spec",
+     "label": "Identidad",
+     "items": [
+      {
+       "k": "Logotipo",
+       "v": "Cursiva de alto contraste con punto final. El trazo horizontal funciona como firma y como horizonte."
+      },
+      {
+       "k": "Tipografía",
+       "v": "Serif cursiva para la marca; sans en mayúsculas espaciadas para la información de temporada."
+      },
+      {
+       "k": "Color",
+       "v": "Tomado del propio paisaje: papel crudo, nube baja, hormigón y gabardina."
+      },
+      {
+       "k": "Fotografía",
+       "v": "Planos generales con el horizonte bajo. Los personajes nunca ocupan más de un tercio del encuadre."
+      }
+     ]
     },
     {
      "t": "palette",
      "colors": [
       {
-       "name": "Crema",
-       "hex": "#E1D4B4"
+       "name": "Papel crudo",
+       "hex": "#F8F6EF"
       },
       {
-       "name": "Verde oliva",
-       "hex": "#8D9A68"
+       "name": "Nube baja",
+       "hex": "#89A0B7"
       },
       {
-       "name": "Terracota",
-       "hex": "#C06639"
+       "name": "Hormigón",
+       "hex": "#676156"
       },
       {
-       "name": "Negro",
-       "hex": "#20201D"
+       "name": "Gabardina",
+       "hex": "#343330"
       }
      ]
     },
     {
      "t": "image",
-     "img": "miso-04",
-     "size": "full"
+     "img": "aisu-05",
+     "size": "wide"
     },
     {
-     "t": "text",
-     "label": "En movimiento",
-     "body": "Una sola línea continua dibuja el día de Miso y termina siendo el trazo de la cabeza del isotipo. A una tinta, sin sombras ni degradados, como el manual."
-    },
-    {
-     "t": "video",
-     "v": "miso-una-linea",
+     "t": "image",
+     "img": "aisu-07",
      "size": "bleed"
     },
     {
      "t": "text",
+     "label": "Aplicaciones",
+     "body": "La campaña sale a la calle en el soporte más discreto posible: el panel de una marquesina. El cartel repite la escena que lo rodea."
+    },
+    {
+     "t": "image",
+     "img": "aisu-08",
+     "size": "full"
+    },
+    {
+     "t": "text",
      "label": "Cierre",
-     "body": "Un manual corto para una marca que tiene que funcionar todos los días."
+     "body": "Una marca que no pide atención. La gana por acumulación: cada imagen se parece a la anterior en el silencio, no en la pose."
+    }
+   ]
+  },
+  {
+   "slug": "eggs",
+   "num": "005",
+   "title": "Eggs",
+   "kind": "Marca de desayunos y fast food",
+   "year": 2025,
+   "client": "Proyecto propio",
+   "context": "Restauración",
+   "disciplines": [
+    "Identidad",
+    "Packaging"
+   ],
+   "filters": [
+    "identidad",
+    "packaging"
+   ],
+   "services": [
+    "Logotipo",
+    "Packaging para llevar",
+    "Rótulo"
+   ],
+   "cover": "eggs-01",
+   "color": {
+    "ground": "#FDC518",
+    "ink": "#141412"
+   },
+   "a": {
+    "lede": "Una marca de desayunos y fast food con un pilar fundamental: los huevos."
+   },
+   "b": {
+    "hook": "Una marca de desayunos y fast food con un pilar fundamental: los huevos.",
+    "lead": "Una marca de desayunos y fast food con un pilar fundamental: los huevos."
+   },
+   "blocks": [
+    {
+     "t": "text",
+     "label": "Introducción",
+     "body": "El desayuno es la comida más importante del día, y el huevo tiene un valor nutricional a la altura."
+    },
+    {
+     "t": "image",
+     "img": "eggs-02",
+     "size": "full"
+    },
+    {
+     "t": "text",
+     "label": "La idea",
+     "body": "Hacer memorable un producto cotidiano sin recurrir a la fotografía de comida. El producto se convierte en personaje: la yema tiene cara y las letras tienen la misma textura blanda que la clara."
+    },
+    {
+     "t": "spec",
+     "label": "Identidad",
+     "items": [
+      {
+       "k": "Icono",
+       "v": "Una yema con cara mínima: dos ojos, una nariz y una boca."
+      },
+      {
+       "k": "Letras",
+       "v": "Redondas y blandas, con contorno negro fino."
+      },
+      {
+       "k": "Color",
+       "v": "Un único amarillo yema que ocupa toda la superficie."
+      }
+     ]
+    },
+    {
+     "t": "image",
+     "img": "eggs-03",
+     "size": "wide"
+    },
+    {
+     "t": "text",
+     "label": "Cierre",
+     "body": "Un amarillo, un icono y una marca que se reconoce desde la otra acera."
+    }
+   ]
+  },
+  {
+   "slug": "la-garita",
+   "num": "006",
+   "title": "La Garita",
+   "kind": "Carteles de película",
+   "year": 2026,
+   "client": "Proyecto propio",
+   "context": "Cartelería de cine",
+   "disciplines": [
+    "Dirección de arte",
+    "Cartelería",
+    "Campaña"
+   ],
+   "filters": [
+    "direccion",
+    "campana"
+   ],
+   "services": [
+    "Concepto de campaña",
+    "Serie de carteles",
+    "Sistema tipográfico",
+    "Exterior"
+   ],
+   "cover": "lagarita-01",
+   "color": {
+    "ground": "#112C27",
+    "ink": "#F5CB17"
+   },
+   "a": {
+    "lede": "Proyecto propio: main poster y teaser poster para una película, cuatro carteles en total. Un bloque tipográfico fijo y una imagen que cambia de registro."
+   },
+   "b": {
+    "hook": "Quien mira y quien es mirado."
+   },
+   "blocks": [
+    {
+     "t": "text",
+     "label": "Introducción",
+     "body": "La Garita es una campaña de cartelería para una película: cuatro carteles y su adaptación a la vitrina de un cine."
+    },
+    {
+     "t": "text",
+     "label": "El reto",
+     "body": "Construir una campaña de estreno con la coherencia de una distribuidora real. Cada cartel tenía que funcionar solo y la serie completa tenía que contar la película sin desvelarla."
+    },
+    {
+     "t": "grid",
+     "imgs": [
+      "lagarita-02",
+      "lagarita-03",
+      "lagarita-04"
+     ],
+     "caption": "La serie: borde, superficie y cortina."
+    },
+    {
+     "t": "text",
+     "label": "La idea",
+     "body": "Una película de drama y suspense ambientada en el sur de España durante el verano: el momento y el lugar óptimos para que florezca la nostalgia y una mirada en perspectiva sobre el paso del tiempo."
+    },
+    {
+     "t": "quote",
+     "text": "Quien mira y quien es mirado."
+    },
+    {
+     "t": "text",
+     "label": "La estrategia",
+     "body": "La tipografía es la constante y la imagen, la variable. Un título condensado en amarillo ocupa siempre el mismo lugar mientras la fotografía pasa del cartel gráfico a pleno sol al primer plano nocturno bajo el agua."
+    },
+    {
+     "t": "spec",
+     "label": "Sistema",
+     "items": [
+      {
+       "k": "Tipografía",
+       "v": "Grotesca condensada muy pesada, compuesta en bloque y alineada a la izquierda."
+      },
+      {
+       "k": "Color",
+       "v": "Amarillo de señalización contra el verde oscuro del agua."
+      },
+      {
+       "k": "Composición",
+       "v": "Título arriba a la izquierda, créditos en columna en la esquina opuesta, fecha centrada al pie."
+      },
+      {
+       "k": "Imagen",
+       "v": "Luz de piscina, reflejos y cuerpos a medio sumergir."
+      }
+     ]
+    },
+    {
+     "t": "palette",
+     "colors": [
+      {
+       "name": "Amarillo señal",
+       "hex": "#F5CB17"
+      },
+      {
+       "name": "Agua",
+       "hex": "#112C27"
+      },
+      {
+       "name": "Negro noche",
+       "hex": "#040905"
+      }
+     ]
+    },
+    {
+     "t": "text",
+     "label": "Aplicaciones",
+     "body": "La serie en su contexto natural: la vitrina de un cine, entre los carteles de otros estrenos."
+    },
+    {
+     "t": "pair",
+     "imgs": [
+      "lagarita-07",
+      "lagarita-08"
+     ]
+    },
+    {
+     "t": "text",
+     "label": "Cierre",
+     "body": "Cuatro carteles con una sola voz. La serie se puede leer en cualquier orden y siempre parece la misma película."
     }
    ]
   }
