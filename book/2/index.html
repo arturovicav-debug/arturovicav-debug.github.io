@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Arturo Vicioso · Model Book</title>
+<meta name="description" content="Arturo Vicioso, model book: comercial, fashion y beauty. 180 cm, ojos marrones, pelo negro.">
+<!-- solo se comparte por enlace: que no salga en buscadores -->
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arturovicav-debug.github.io/book/2/">
+<meta property="og:title" content="Arturo Vicioso · Model Book">
+<meta property="og:description" content="Comercial · Fashion · Beauty. 180 cm · 42/M · pelo negro · ojos marrones.">
+<meta property="og:image" content="https://arturovicav-debug.github.io/book/og-book.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://arturovicav-debug.github.io/book/og-book.jpg">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@400;500&display=swap">
+<style>
+:root{ --paper:#F7F3EA; --ink:#1C1A17; --dim:#8A8478; --line:rgba(28,26,23,.14); }
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--ink);font:400 13px/1.5 Montserrat,system-ui,sans-serif;letter-spacing:.04em}
+header{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:14px max(16px,env(safe-area-inset-left));background:rgba(247,243,234,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.name{font:500 22px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.06em;text-transform:uppercase}
+.name small{display:block;margin-top:5px;font:500 10px/1 Montserrat,sans-serif;letter-spacing:.24em;color:var(--dim)}
+.btn{flex:none;display:inline-block;padding:10px 16px;border:1px solid var(--ink);color:var(--ink);text-decoration:none;
+  font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+main{max-width:860px;margin:0 auto;padding:32px 16px 16px;display:grid;gap:32px}
+main canvas{display:block;width:100%;height:auto;background:#ECE6D9;box-shadow:0 1px 2px rgba(0,0,0,.06),0 12px 40px rgba(0,0,0,.08)}
+#status{text-align:center;color:var(--dim);padding:48px 0}
+footer{max-width:860px;margin:0 auto;padding:40px 16px 56px;text-align:center;color:var(--dim)}
+footer a{color:var(--ink)}
+footer p+p{margin-top:8px}
+@media (max-width:480px){ main{gap:16px;padding-top:16px} .name{font-size:18px} .btn{padding:9px 12px} }
+</style>
+</head>
+<body>
+<header>
+  <div class="name">Arturo Vicioso<small>Model Book</small></div>
+  <a class="btn" href="../arturo-vicioso-book-2.pdf" download>Descargar PDF</a>
+</header>
+<main id="pages"><p id="status">Cargando book…</p></main>
+<footer>
+  <p>Contacto: <a href="mailto:arturo.vic.av@gmail.com">arturo.vic.av@gmail.com</a></p>
+  <p><a class="btn" href="../arturo-vicioso-book-2.pdf" download style="margin-top:16px">Descargar PDF</a></p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+(async () => {
+  const main = document.getElementById("pages"), status = document.getElementById("status");
+  try {
+    const pdf = await pdfjsLib.getDocument("../arturo-vicioso-book-2.pdf").promise;
+    // nitidez: ancho real en pantalla x densidad de píxeles, con tope para móviles
+    const target = Math.min(main.clientWidth - 32, 828) * Math.min(window.devicePixelRatio || 1, 2);
+    for (let i = 1; i <= pdf.numPages; i++) {
+      const page = await pdf.getPage(i);
+      const vp = page.getViewport({ scale: target / page.getViewport({ scale: 1 }).width });
+      const canvas = document.createElement("canvas");
+      canvas.width = vp.width; canvas.height = vp.height;
+      canvas.setAttribute("role", "img"); canvas.setAttribute("aria-label", "Página " + i + " del book");
+      await page.render({ canvasContext: canvas.getContext("2d"), viewport: vp }).promise;
+      if (i === 1) status.remove();
+      main.appendChild(canvas);
+    }
+  } catch (e) {
+    status.innerHTML = 'No se pudo mostrar el book. <a href="../arturo-vicioso-book-2.pdf">Abrir el PDF</a>';
+  }
+})();
+</script>
+</body>
+</html>
