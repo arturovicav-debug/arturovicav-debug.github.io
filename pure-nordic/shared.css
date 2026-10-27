@@ -1,0 +1,49 @@
+/* COLD OPEN — shared tokens and components for every Pure Nordic piece */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap");
+
+:root{
+  --snow:#F5F3EE;     /* paper, cans, highlights */
+  --mist:#DCE5EA;     /* soft cold background */
+  --glacier:#9FBACB;  /* northern accent */
+  --fjord:#22384A;    /* deep text and night */
+  --sand:#E7D8C0;     /* southern warmth */
+  --gold:#B08E55;     /* the drop: used once per layout */
+  --ink:#18222B;
+  --serif:"Instrument Serif", Georgia, serif;
+  --sans:"Inter Tight", Helvetica, Arial, sans-serif;
+  --mono:"JetBrains Mono", Consolas, monospace;
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ background:#c9cfd2; color:var(--ink); font-family:var(--sans); font-weight:300;
+      -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+
+.serif{ font-family:var(--serif); font-weight:400; }
+.kicker{ font-family:var(--sans); font-weight:500; font-size:7pt; letter-spacing:.32em; text-transform:uppercase; }
+.mono{ font-family:var(--mono); font-size:6.5pt; letter-spacing:.06em; }
+.gold{ color:var(--gold); }
+
+/* Photo slot: drop photos/kv-XX.jpg (or .png/.webp) next to the html and it replaces the stand-in scene. */
+.ph{ position:relative; overflow:hidden; background:var(--mist); }
+.ph > img.photo{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
+.ph .scene{ position:absolute; inset:0; }
+.ph .scene img.can{ position:absolute; left:50%; top:50%; height:62%; width:auto; --dy:0mm;
+                    transform:translate(-50%,-50%) translateY(var(--dy));
+                    filter:drop-shadow(0 4mm 5mm rgba(20,35,45,.22)); }
+.ph .tag{ position:absolute; left:3mm; bottom:2.4mm; z-index:1; font-family:var(--mono); font-size:5.5pt;
+          letter-spacing:.08em; color:rgba(24,34,43,.55); }
+
+/* Stand-in scenes, one per key visual */
+.sc-ice     { background:radial-gradient(ellipse 34% 9% at 50% 86%, rgba(255,255,255,.9), transparent),
+                         linear-gradient(180deg,#2b3f4f 0%,#4d6576 55%,#e9eef1 56%,#cfdbe2 100%); }
+.sc-court   { background:linear-gradient(180deg,#e9dcc4 0 52%,#3f6f8f 52% 54%,#5d8fa8 54% 100%); }
+.sc-ritual  { background:linear-gradient(180deg,#f3d9c4 0%,#cfdbe4 45%,#9fbacb 70%,#e7d8c0 71% 100%); }
+.sc-split   { background:linear-gradient(90deg,#dfe8ee 0 50%,#e7d8c0 50% 100%); }
+.sc-swap    { background:linear-gradient(180deg,#3a3f43 0%,#6a6f72 60%,#9a9895 60% 100%); }
+.sc-golden  { background:radial-gradient(circle at 75% 30%,#ffe3b0 0 8%,transparent 30%),
+                         linear-gradient(180deg,#f1c99a 0%,#e7d8c0 55%,#c9b79b 56% 100%); }
+.sc-origin  { background:radial-gradient(ellipse 42% 16% at 50% 92%,#7d8676 0 60%,transparent 62%),
+                         linear-gradient(180deg,#f5f3ee,#e3e7e6); }
+
+/* Logo lockup (inline SVG uses currentColor) */
+.logo{ display:inline-flex; align-items:center; }
+.logo svg, .logo img{ height:100%; width:auto; display:block; }
