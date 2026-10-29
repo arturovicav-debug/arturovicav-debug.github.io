@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="NAW Men · Drop 001: camiseta Discipline starts with movement y quarter-zip muscle fit. Propuesta de diseño de Arturo Vicioso.">
+<meta property="og:title" content="NAW Men · Drop 001 · Propuesta de diseño">
+<meta property="og:description" content="Camiseta Discipline starts with movement y quarter-zip muscle fit. Arturo Vicioso.">
+<meta property="og:image" content="https://arturovicav-debug.github.io/naw/img/discipline-worn.jpg">
+<title>NAW Men · Drop 001</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+  /* Resumen de la propuesta para NAW Men (mismo grupo que Pure Nordic). Paleta: negro, hueso, verde oliva y un toque dorado. */
+  :root{ --ink:#141414; --bone:#f1efe9; --olive:#6b7a52; --stone:#d9d4c8; --gold:#c8a35a; --muted:#5b5b55; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--bone); color:var(--ink); font-family:"Inter Tight", Helvetica, Arial, sans-serif; font-weight:300; font-size:17px; line-height:1.55; }
+  a{ color:inherit; }
+  .wrap{ max-width:1240px; margin:0 auto; padding:0 32px; }
+  @media (max-width:600px){ .wrap{ padding:0 18px; } }
+
+  nav{ position:sticky; top:0; z-index:10; background:rgba(20,20,20,.94); backdrop-filter:blur(8px); color:var(--bone); }
+  nav .wrap{ display:flex; gap:26px; align-items:center; height:58px; overflow-x:auto; white-space:nowrap; }
+  nav img{ height:22px; margin-right:8px; flex:none; }
+  nav a{ text-decoration:none; font-family:"Barlow Condensed"; font-weight:500; font-size:15px; letter-spacing:.24em; text-transform:uppercase; color:#bdbab2; }
+  nav a:hover{ color:#fff; }
+
+  header.hero{ background:var(--ink); color:var(--bone); padding:110px 0 90px; position:relative; overflow:hidden; }
+  .hero .k{ color:var(--gold); }
+  .hero h1{ font-family:"Barlow Condensed"; font-weight:800; font-size:clamp(64px,10vw,150px); line-height:.86; text-transform:uppercase; margin-top:18px; }
+  .hero h1 span{ color:var(--olive); }
+  .hero p{ max-width:760px; margin-top:26px; font-size:20px; color:#c9c6be; }
+  .hero .meta{ margin-top:46px; display:flex; gap:40px; flex-wrap:wrap; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.08em; color:#8d8a83; }
+
+  .k{ display:block; font-family:"Barlow Condensed"; font-weight:500; font-size:15px; letter-spacing:.3em; text-transform:uppercase; color:var(--olive); }
+  section{ padding:96px 0 40px; scroll-margin-top:58px; }
+  section + section{ border-top:1px solid rgba(20,20,20,.12); }
+  h2{ font-family:"Barlow Condensed"; font-weight:800; font-size:clamp(44px,6vw,76px); line-height:.9; text-transform:uppercase; margin-top:12px; }
+  h2 span{ color:var(--olive); }
+  h3{ font-family:"Barlow Condensed"; font-weight:700; font-size:28px; text-transform:uppercase; letter-spacing:.02em; margin:48px 0 10px; }
+  .lead{ max-width:840px; margin-top:20px; font-size:19px; color:#3a3a36; }
+  .note{ font-size:15px; color:var(--muted); margin-top:10px; }
+
+  .cards{ display:grid; gap:20px; margin-top:28px; grid-template-columns:repeat(4,1fr); }
+  @media (max-width:900px){ .cards{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .cards{ grid-template-columns:1fr; } }
+  .card{ border-top:2px solid var(--ink); padding-top:14px; }
+  .card b{ display:block; font-family:"Barlow Condensed"; font-weight:700; font-size:24px; text-transform:uppercase; margin-bottom:6px; }
+  .card span{ font-size:15px; color:#4a4a45; }
+
+  .gal{ display:grid; gap:16px; margin-top:26px; }
+  .gal figure{ margin:0; }
+  .gal a{ display:block; overflow:hidden; background:#e2dfd6; }
+  .gal img{ width:100%; display:block; transition:transform .5s ease; }
+  .gal a:hover img{ transform:scale(1.02); }
+  .gal figcaption{ font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d6b64; margin-top:8px; }
+  .g2{ grid-template-columns:repeat(2,1fr); } .g3{ grid-template-columns:repeat(3,1fr); } .g12{ grid-template-columns:1.5fr 1fr; align-items:start; }
+  @media (max-width:900px){ .g3{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .g2,.g3,.g12{ grid-template-columns:1fr; } }
+
+  .files{ list-style:none; margin-top:22px; border-top:1px solid rgba(20,20,20,.15); }
+  .files li{ display:flex; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid rgba(20,20,20,.12); font-size:15px; }
+  .files a{ font-family:"JetBrains Mono"; font-size:13px; overflow-wrap:anywhere; }
+  .files span{ color:var(--muted); flex:none; max-width:45%; text-align:right; }
+  @media (max-width:600px){ .files li{ flex-direction:column; gap:2px; } .files span{ max-width:none; text-align:left; } }
+
+  .ideas{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:28px; }
+  @media (max-width:900px){ .ideas{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:560px){ .ideas{ grid-template-columns:1fr; } }
+  .idea{ background:#fff; padding:22px; }
+  .idea b{ display:block; font-family:"Barlow Condensed"; font-weight:700; font-size:22px; text-transform:uppercase; }
+  .idea span{ display:block; font-size:14px; color:#4a4a45; margin-top:6px; }
+  .chip{ display:inline-block; font-family:"Barlow Condensed"; font-size:12px; letter-spacing:.14em; text-transform:uppercase; padding:3px 9px; border-radius:20px; margin-top:12px; }
+  .ok{ background:#dfe6d2; color:#3d4b2a; } .no{ background:#e7e4dc; color:#66645d; }
+
+  footer{ background:var(--ink); color:#9b988f; padding:50px 0; margin-top:80px; font-size:14px; }
+  footer img{ height:26px; display:block; margin-bottom:14px; }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <img src="img/naw-logo-white.png" alt="NAW">
+  <a href="#marca">La marca</a><a href="#discipline">Discipline tee</a><a href="#quarterzip">Quarter-zip</a><a href="#ideas">Ideas</a><a href="#archivos">Archivos</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="k">Propuesta de diseño · NAW Men · Drop 001</span>
+  <h1>Discipline<br>starts with <span>movement.</span></h1>
+  <p>Primeras piezas para la línea de hombre de NAW Yoga, la marca de ropa activa del grupo de Pure Nordic: una camiseta oversized de estampado gastado y un quarter-zip muscle fit, con sus mockups, el carrusel de Instagram y los archivos listos para imprenta.</p>
+  <div class="meta"><span>DISEÑO · ARTURO VICIOSO</span><span>OCTUBRE 2026</span><span>LANZAMIENTO HOMBRE · 07.07.2027</span></div>
+</div></header>
+
+<!-- MARCA -->
+<section id="marca"><div class="wrap">
+  <span class="k">01 · La marca</span>
+  <h2>Ediciones limitadas. <span>Nunca se repiten.</span></h2>
+  <p class="lead">NAW ("now") la fundaron dos mujeres de yoga y pilates que también están detrás de Pure Nordic. Cada colección dura seis meses y se retira para siempre. La de mujer se presenta el 11.11.2026 y la de hombre llega el 07.07.2027, con España como primer mercado. El reto de la línea de hombre: que moverse con consciencia se vea fuerte y con estilo, no como algo ajeno.</p>
+  <div class="cards">
+    <div class="card"><b>Disciplina</b><span>"Discipline starts with movement": su frase, y la que más conecta con el hombre que entrena.</span></div>
+    <div class="card"><b>Exclusividad</b><span>Cada diseño es "Limited Edition No:001". El número va visible en la prenda.</span></div>
+    <div class="card"><b>Esterilla y agua</b><span>"On the mat, in the water": yoga, pilates, pádel y mar en Marbella.</span></div>
+    <div class="card"><b>Paleta</b><span>Negro, hueso, verde oliva y un toque dorado, los colores de su logo y su esterilla.</span></div>
+  </div>
+</div></section>
+
+<!-- DISCIPLINE TEE -->
+<section id="discipline"><div class="wrap">
+  <span class="k">02 · Camiseta</span>
+  <h2>Discipline <span>tee.</span></h2>
+  <p class="lead">Camiseta oversized en negro lavado (washed black), con el estampado blanco visiblemente gastado, como una camiseta vintage de concierto: tinta agrietada, poros y desconchones. Detrás, la frase en grande con el logo y "Limited Edition · No:001"; delante, solo el logo pequeño en el pecho.</p>
+  <div class="gal g2" style="margin-top:30px">
+    <figure style="grid-column:1/-1"><a href="img/discipline-front-back.jpg" target="_blank"><img src="img/discipline-front-back.jpg" alt="Delante y detrás"></a><figcaption>DELANTE Y DETRÁS · WASHED BLACK OVERSIZED</figcaption></figure>
+    <figure><a href="img/discipline-print-detail.jpg" target="_blank"><img src="img/discipline-print-detail.jpg" alt="Detalle del estampado"></a><figcaption>DETALLE · TINTA AGRIETADA SOBRE ALGODÓN LAVADO</figcaption></figure>
+    <figure><a href="img/discipline-worn.jpg" target="_blank"><img src="img/discipline-worn.jpg" alt="Puesta"></a><figcaption>PUESTA · TERRAZA EN MARBELLA AL AMANECER</figcaption></figure>
+  </div>
+  <h3>Para imprenta</h3>
+  <p class="note">El arte es propio, no generado por IA: el texto y el logo son exactos y el desgaste va dentro del archivo, a una sola tinta y a 300 ppp.</p>
+  <div class="gal g2">
+    <figure><a href="img/discipline-artwork-black.jpg" target="_blank"><img src="img/discipline-artwork-black.jpg" alt=""></a><figcaption>ESPALDA · TINTA BLANCA SOBRE NEGRO · 29,9 × 31,5 CM</figcaption></figure>
+    <figure><a href="img/discipline-artwork-positive.jpg" target="_blank"><img src="img/discipline-artwork-positive.jpg" alt=""></a><figcaption>POSITIVO PARA FOTOLITO · NEGRO SOBRE BLANCO</figcaption></figure>
+    <figure style="grid-column:1/-1"><a href="files/NAW-DSWM-001_PRINT-SPEC.pdf" target="_blank"><img src="img/discipline-print-spec.jpg" alt="Ficha técnica"></a><figcaption>FICHA TÉCNICA A3 · MEDIDAS, COLOCACIÓN, TINTA Y TEJIDO · <a href="files/NAW-DSWM-001_PRINT-SPEC.pdf" target="_blank">PDF</a></figcaption></figure>
+  </div>
+</div></section>
+
+<!-- QUARTER-ZIP -->
+<section id="quarterzip"><div class="wrap">
+  <span class="k">03 · Quarter-zip</span>
+  <h2>The quarter-zip. <span>No:001.</span></h2>
+  <p class="lead">Quarter-zip de punto sin costuras, muscle fit, en gris pizarra jaspeado. En el pecho, simétrico a ambos lados de la cremallera: "NAW" solo en texto en un lado y, en el otro, "Limited Edition · No:001 · 07.07.27". Así la exclusividad se ve en cada foto.</p>
+  <div class="gal g12" style="margin-top:30px">
+    <figure><a href="img/quarterzip-chest.jpg" target="_blank"><img src="img/quarterzip-chest.jpg" alt="Disposición del pecho"></a><figcaption>DISPOSICIÓN DEL PECHO · AMBOS ESTAMPADOS A 6,5 CM, MISMA ALTURA</figcaption></figure>
+    <figure><a href="img/quarterzip-2.jpg" target="_blank"><img src="img/quarterzip-2.jpg" alt="Producto"></a><figcaption>EL PRODUCTO</figcaption></figure>
+  </div>
+  <h3>Carrusel de Instagram</h3>
+  <p class="note">Tres imágenes a 1080 × 1350 (la persona, el producto y el movimiento) con el mismo modelo, la misma prenda y la misma luz.</p>
+  <div class="gal g3">
+    <figure><a href="img/quarterzip-1.jpg" target="_blank"><img src="img/quarterzip-1.jpg" alt=""></a><figcaption>1 · LA PERSONA</figcaption></figure>
+    <figure><a href="img/quarterzip-2.jpg" target="_blank"><img src="img/quarterzip-2.jpg" alt=""></a><figcaption>2 · EL PRODUCTO</figcaption></figure>
+    <figure><a href="img/quarterzip-3.jpg" target="_blank"><img src="img/quarterzip-3.jpg" alt=""></a><figcaption>3 · EL MOVIMIENTO</figcaption></figure>
+  </div>
+  <div class="gal"><figure><a href="img/quarterzip-preview.jpg" target="_blank"><img src="img/quarterzip-preview.jpg" alt=""></a><figcaption>CÓMO SE VE EN EL FEED · TEXTO DEL POST EN <a href="files/quarterzip-caption.txt" target="_blank">CAPTION.TXT</a></figcaption></figure></div>
+</div></section>
+
+<!-- IDEAS -->
+<section id="ideas"><div class="wrap">
+  <span class="k">04 · Más ideas para el drop</span>
+  <h2>Lo que <span>puede venir.</span></h2>
+  <div class="ideas">
+    <div class="idea"><b>Discipline starts with movement</b><span>Camiseta washed black con estampado gastado.</span><span class="chip ok">Hecha</span></div>
+    <div class="idea"><b>Quarter-zip No:001</b><span>Muscle fit con la edición en el pecho.</span><span class="chip ok">Hecho</span></div>
+    <div class="idea"><b>The Pose Series</b><span>Cada drop estrena una postura dibujada con el trazo del logo: la grulla, el guerrero… Coleccionable.</span><span class="chip no">Propuesta</span></div>
+    <div class="idea"><b>The only guy in class</b><span>Humor y orgullo para el chico que va a pilates.</span><span class="chip no">Propuesta</span></div>
+    <div class="idea"><b>NAW. Not later.</b><span>Juego con el nombre: "now", no luego.</span><span class="chip no">Propuesta</span></div>
+    <div class="idea"><b>Mat → Water</b><span>Pantalón corto híbrido: de la esterilla al mar.</span><span class="chip no">Propuesta</span></div>
+  </div>
+</div></section>
+
+<!-- ARCHIVOS -->
+<section id="archivos"><div class="wrap">
+  <span class="k">05 · Archivos</span>
+  <h2>Listos para <span>producir.</span></h2>
+  <ul class="files">
+    <li><a href="files/NAW-DSWM-001_PRINT-SPEC.pdf" target="_blank">NAW-DSWM-001_PRINT-SPEC.pdf</a><span>Ficha técnica A3 para la imprenta</span></li>
+    <li><a href="files/NAW-DSWM-001_BACK_WHITE-INK_transparent_300dpi.png" target="_blank">NAW-DSWM-001_BACK_WHITE-INK_transparent_300dpi.png</a><span>Espalda, tinta blanca, 29,9 × 31,5 cm</span></li>
+    <li><a href="files/NAW-DSWM-001_FRONT_WHITE-INK_transparent_300dpi.png" target="_blank">NAW-DSWM-001_FRONT_WHITE-INK_transparent_300dpi.png</a><span>Pecho, tinta blanca, 9 × 3,8 cm</span></li>
+    <li><a href="files/NAW-DSWM-001_BACK_POSITIVE_1-1.pdf" target="_blank">NAW-DSWM-001_BACK_POSITIVE_1-1.pdf</a><span>Positivo de la espalda a tamaño real</span></li>
+    <li><a href="files/NAW-DSWM-001_FRONT_POSITIVE_1-1.pdf" target="_blank">NAW-DSWM-001_FRONT_POSITIVE_1-1.pdf</a><span>Positivo del pecho a tamaño real</span></li>
+    <li><a href="files/quarterzip-caption.txt" target="_blank">quarterzip-caption.txt</a><span>Texto del post del carrusel</span></li>
+  </ul>
+  <p class="note">Las fotos con personas están generadas con IA y sirven como previsualización. Para publicar, lo ideal es repetirlas en una sesión real.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <img src="img/naw-logo-white.png" alt="NAW">
+  Propuesta no solicitada para NAW Yoga · Diseño Arturo Vicioso · arturo.vic.av@gmail.com · @arturo.vsl
+</div></footer>
+</body>
+</html>
