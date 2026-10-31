@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gym Junkie · Three styles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;800&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+  /* Separate sheet (not part of the Run Junkies proposal): one Gym Junkie design per named style, image only. */
+  :root{ --paper:#f5f2ea; --ink:#1d241a; --lime:#d6e898; --deep:#17201a; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--paper); color:var(--ink); font-family:"Outfit", Helvetica, Arial, sans-serif; }
+  img{ display:block; width:100%; }
+  .wrap{ max-width:1100px; margin:0 auto; padding:0 32px; }
+  @media (max-width:600px){ .wrap{ padding:0 16px; } }
+  header{ background:var(--deep); color:var(--lime); padding:56px 0 52px; }
+  header small{ display:block; font-weight:500; font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:#aab39f; }
+  header h1{ font-weight:800; font-size:clamp(46px,8vw,100px); line-height:.9; text-transform:uppercase; margin-top:12px; }
+  section{ padding:56px 0 0; }
+  .tag{ display:inline-flex; align-items:baseline; gap:14px; background:var(--ink); color:var(--lime); padding:10px 18px 9px; }
+  .tag b{ font-weight:800; font-size:20px; letter-spacing:.16em; text-transform:uppercase; }
+  .tag span{ font-weight:500; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#f5f2ea; }
+  .tiles{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:18px; }
+  @media (max-width:640px){ .tiles{ grid-template-columns:1fr; } }
+  .tiles a{ display:block; overflow:hidden; background:#e7e3d8; text-decoration:none; color:inherit; }
+  .tiles img{ aspect-ratio:4/5; object-fit:cover; transition:transform .5s ease; }
+  .tiles a:hover img{ transform:scale(1.02); }
+  .tiles i{ display:block; font-style:normal; font-family:"JetBrains Mono"; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#6d7166; background:var(--paper); padding-top:8px; }
+  footer{ padding:64px 0 36px; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d7166; }
+  @page{ size:1280px 860px; margin:0; }
+  @media print{
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    header{ height:860px; display:flex; align-items:center; }
+    section{ break-before:page; padding-top:40px; }
+    .tiles{ grid-template-columns:1fr 1fr; max-width:900px; break-inside:avoid; }
+    footer{ display:none; }
+  }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <small>Gym Junkie Café · design study</small>
+  <h1>Three styles</h1>
+</div></header>
+
+<section><div class="wrap">
+  <div class="tag"><b>Style 1</b><span>Fresh catch</span></div>
+  <div class="tiles">
+    <a href="img/s1-back.jpg" target="_blank"><img src="img/s1-back.jpg" alt="Fresh catch, back"><i>Back</i></a>
+    <a href="img/s1-design.jpg" target="_blank"><img src="img/s1-design.jpg" alt="Fresh catch, design"><i>Design</i></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag"><b>Style 2</b><span>My goodness</span></div>
+  <div class="tiles">
+    <a href="img/s2-back.jpg" target="_blank"><img src="img/s2-back.jpg" alt="My goodness, back"><i>Back</i></a>
+    <a href="img/s2-design.jpg" target="_blank"><img src="img/s2-design.jpg" alt="My goodness, design"><i>Design</i></a>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="tag"><b>Style 3</b><span>Gym Junkie Club</span></div>
+  <div class="tiles">
+    <a href="img/s3-back.jpg" target="_blank"><img src="img/s3-back.jpg" alt="Gym Junkie Club, back"><i>Back</i></a>
+    <a href="img/s3-design.jpg" target="_blank"><img src="img/s3-design.jpg" alt="Gym Junkie Club, design"><i>Design</i></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Design · Arturo Vicioso</div></footer>
+</body>
+</html>
