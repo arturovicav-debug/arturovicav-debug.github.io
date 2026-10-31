@@ -5,53 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Run Junkies × NAW: shirt options and launch post for Gym Junkie Café.">
 <meta property="og:title" content="Run Junkies × NAW · Proposal for Gym Junkie Café">
-<meta property="og:description" content="Pick your shirt.">
-<meta property="og:image" content="https://arturovicav-debug.github.io/run-junkies/img/a-front-back.jpg">
+<meta property="og:description" content="The shirt options.">
+<meta property="og:image" content="https://arturovicav-debug.github.io/run-junkies/img/c2-front-back.jpg">
 <title>Run Junkies × NAW · Proposal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;800&family=JetBrains+Mono:wght@400&display=swap">
 <style>
-  /* Proposal for Gym Junkie Café, image-led: each option is a label and its pictures. Palette from their logo (leaf green, lime). */
-  :root{ --paper:#f5f2ea; --ink:#1d241a; --lime:#d6e898; --deep:#17201a; --line:rgba(29,36,26,.14); }
+  /* Proposal for Gym Junkie Café, image only: every option is a tag and three pictures (front, back, design). */
+  :root{ --paper:#f5f2ea; --ink:#1d241a; --lime:#d6e898; --deep:#17201a; }
   *{ box-sizing:border-box; margin:0; padding:0; }
   body{ background:var(--paper); color:var(--ink); font-family:"Outfit", Helvetica, Arial, sans-serif; }
   img{ display:block; width:100%; }
   .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
   @media (max-width:600px){ .wrap{ padding:0 16px; } }
-  a.frame{ display:block; overflow:hidden; background:#e7e3d8; }
-  .frame img{ transition:transform .5s ease; }
-  .frame:hover img{ transform:scale(1.015); }
 
   header{ background:var(--deep); color:var(--lime); padding:64px 0 60px; }
   header small{ display:block; font-weight:500; font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:#aab39f; }
   header h1{ font-weight:800; font-size:clamp(54px,9vw,120px); line-height:.9; text-transform:uppercase; margin-top:14px; }
   header h1 span{ color:#f5f2ea; font-size:.4em; letter-spacing:.12em; display:block; margin-top:10px; font-weight:500; }
 
-  section{ padding:64px 0 8px; }
-  .tag{ display:inline-flex; align-items:baseline; gap:14px; background:var(--ink); color:var(--lime); padding:10px 18px 9px; margin-bottom:22px; }
+  section{ padding:64px 0 0; }
+  .tag{ display:inline-flex; align-items:baseline; gap:14px; background:var(--ink); color:var(--lime); padding:10px 18px 9px; }
   .tag b{ font-weight:800; font-size:20px; letter-spacing:.16em; text-transform:uppercase; }
   .tag span{ font-weight:500; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#f5f2ea; }
-  @media (max-width:520px){ .tag{ flex-direction:column; gap:4px; } }
-  .two{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; align-items:start; }
-  .post{ max-width:560px; }
-  @media (max-width:700px){ .two{ grid-template-columns:1fr; } }
-
-  .choose{ background:var(--deep); color:var(--lime); padding:64px 0 70px; margin-top:64px; }
-  .choose h2{ font-weight:800; font-size:clamp(36px,5vw,60px); text-transform:uppercase; line-height:.95; }
-  .opts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:28px; }
-  .opt{ display:flex; gap:14px; align-items:center; text-decoration:none; background:#202b22; border:1px solid rgba(214,232,152,.2); padding:12px; transition:border-color .2s, transform .2s; }
-  .opt:hover{ border-color:var(--lime); transform:translateY(-2px); }
-  .opt img{ width:76px; height:76px; object-fit:cover; flex:none; }
-  .opt b{ font-weight:800; font-size:19px; letter-spacing:.06em; text-transform:uppercase; color:var(--lime); }
-  footer{ padding:28px 0 36px; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d7166; }
+  .sub{ display:flex; align-items:baseline; gap:12px; margin:40px 0 0; font-weight:800; font-size:17px; letter-spacing:.16em; text-transform:uppercase; }
+  .sub span{ font-weight:500; font-size:13px; letter-spacing:.2em; color:#5d6156; }
+  .tiles{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px; }
+  @media (max-width:700px){ .tiles{ grid-template-columns:1fr; } }
+  .tiles a{ display:block; overflow:hidden; background:#e7e3d8; text-decoration:none; color:inherit; }
+  .tiles img{ aspect-ratio:4/5; object-fit:cover; transition:transform .5s ease; }
+  .tiles a:hover img{ transform:scale(1.02); }
+  .tiles i{ display:block; font-style:normal; font-family:"JetBrains Mono"; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#6d7166; background:var(--paper); padding-top:8px; }
+  .post{ max-width:420px; margin-top:18px; }
+  .post a{ display:block; }
+  footer{ padding:70px 0 36px; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d7166; }
 
   /* PDF export: desktop layout on tall pages, colours kept, one option per page */
   @page{ size:1280px 1810px; margin:0; }
   @media print{
     *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-    #option-a, #option-b, #option-c, .choose{ break-before:page; }
-    figure, .two, .opt{ break-inside:avoid; }
-    .choose{ margin-top:0; }
+    #option-a, #option-b, #option-c, #c2, #post{ break-before:page; }
+    .tiles, .sub{ break-inside:avoid; }
+    .sub{ break-after:avoid; }
   }
 </style>
 </head>
@@ -64,33 +59,51 @@
 
 <section id="option-a"><div class="wrap">
   <div class="tag"><b>Option A</b><span>Sunday mornings</span></div>
-  <a class="frame" href="img/a-front-back.jpg" target="_blank"><img src="img/a-front-back.jpg" alt="Option A, front and back"></a>
-  <div class="two">
-    <a class="frame" href="img/a-mockup.jpg" target="_blank"><img src="img/a-mockup.jpg" alt="Option A on the road"></a>
-    <a class="frame" href="img/a-artwork.jpg" target="_blank"><img src="img/a-artwork.jpg" alt="Option A back artwork"></a>
+  <div class="tiles">
+    <a href="img/01-front.jpg" target="_blank"><img src="img/01-front.jpg" alt="Option A front: Gym Junkie Café and NAW on the chest"><i>Front</i></a>
+    <a href="img/a-mockup.jpg" target="_blank"><img src="img/01-back.jpg" alt="Option A back"><i>Back</i></a>
+    <a href="img/01-design.jpg" target="_blank"><img src="img/01-design.jpg" alt="Option A back design"><i>Design</i></a>
   </div>
 </div></section>
 
 <section id="option-b"><div class="wrap">
   <div class="tag"><b>Option B</b><span>Sunday Run Club</span></div>
-  <a class="frame" href="img/b-front-back.jpg" target="_blank"><img src="img/b-front-back.jpg" alt="Option B, front and back"></a>
-  <div class="two">
-    <a class="frame" href="img/b-back-artwork.jpg" target="_blank"><img src="img/b-back-artwork.jpg" alt="Option B back artwork"></a>
+  <div class="tiles">
+    <a href="img/03-front.jpg" target="_blank"><img src="img/03-front.jpg" alt="Option B front: Gym Junkie Café and NAW on the chest"><i>Front</i></a>
+    <a href="img/03-front-back.jpg" target="_blank"><img src="img/03-back.jpg" alt="Option B back"><i>Back</i></a>
+    <a href="img/03-design.jpg" target="_blank"><img src="img/03-design.jpg" alt="Option B back design"><i>Design</i></a>
+  </div>
+</div></section>
+
+<section id="option-c"><div class="wrap">
+  <div class="tag"><b>Option C</b><span>Wellness Club</span></div>
+
+  <div class="sub">C1<span>House Rules</span></div>
+  <div class="tiles">
+    <a href="img/c1-front.jpg" target="_blank"><img src="img/c1-front.jpg" alt="Option C1 front"><i>Front</i></a>
+    <a href="img/c1-front-back.jpg" target="_blank"><img src="img/c1-back.jpg" alt="Option C1 back"><i>Back</i></a>
+    <a href="img/c1-design.jpg" target="_blank"><img src="img/c1-design.jpg" alt="Option C1 back design"><i>Design</i></a>
+  </div>
+
+  <div id="c2" class="sub">C2<span>Mens Sana</span></div>
+  <div class="tiles">
+    <a href="img/c2-front.jpg" target="_blank"><img src="img/c2-front.jpg" alt="Option C2 front"><i>Front</i></a>
+    <a href="img/c2-front-back.jpg" target="_blank"><img src="img/c2-back.jpg" alt="Option C2 back"><i>Back</i></a>
+    <a href="img/c2-design.jpg" target="_blank"><img src="img/c2-design.jpg" alt="Option C2 back design"><i>Design</i></a>
+  </div>
+
+  <div class="sub">C3<span>Fresh Daily</span></div>
+  <div class="tiles">
+    <a href="img/c3-front.jpg" target="_blank"><img src="img/c3-front.jpg" alt="Option C3 front"><i>Front</i></a>
+    <a href="img/c3-front-back.jpg" target="_blank"><img src="img/c3-back.jpg" alt="Option C3 back"><i>Back</i></a>
+    <a href="img/c3-design.jpg" target="_blank"><img src="img/c3-design.jpg" alt="Option C3 back design"><i>Design</i></a>
   </div>
 </div></section>
 
 <section id="post"><div class="wrap">
   <div class="tag"><b>Launch post</b><span>Instagram</span></div>
-  <a class="frame post" href="img/post.jpg" target="_blank"><img src="img/post.jpg" alt="Run Junkies launch post"></a>
+  <div class="post"><a href="img/post.jpg" target="_blank"><img src="img/post.jpg" alt="Run Junkies launch post"></a></div>
 </div></section>
-
-<div class="choose" id="choose"><div class="wrap">
-  <h2>Pick your shirt</h2>
-  <div class="opts">
-    <a class="opt" href="mailto:arturo.vic.av@gmail.com?subject=Run%20Junkies%20%E2%80%94%20we%20pick%20Option%20A"><img src="img/a-front-back.jpg" alt="" style="object-position:82% 30%"><b>Option A</b></a>
-    <a class="opt" href="mailto:arturo.vic.av@gmail.com?subject=Run%20Junkies%20%E2%80%94%20we%20pick%20Option%20B"><img src="img/b-back-artwork.jpg" alt="" style="object-position:50% 40%"><b>Option B</b></a>
-  </div>
-</div></div>
 
 <footer><div class="wrap">Design · Arturo Vicioso · arturo.vic.av@gmail.com</div></footer>
 </body>
