@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gym Junkie Club · Tee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;800&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+  /* Gym Junkie Club tee, presented in the same format as the Run Junkies proposal (tag + Front · Back · Design),
+     on its own page. Not part of the proposal. */
+  :root{ --paper:#f5f2ea; --ink:#1d241a; --lime:#d6e898; --deep:#17201a; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--paper); color:var(--ink); font-family:"Outfit", Helvetica, Arial, sans-serif; }
+  img{ display:block; width:100%; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+  @media (max-width:600px){ .wrap{ padding:0 16px; } }
+  header{ background:var(--deep); color:var(--lime); padding:64px 0 60px; }
+  header small{ display:block; font-weight:500; font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:#aab39f; }
+  header h1{ font-weight:800; font-size:clamp(54px,9vw,120px); line-height:.9; text-transform:uppercase; margin-top:14px; }
+  header h1 span{ color:#f5f2ea; font-size:.4em; letter-spacing:.12em; display:block; margin-top:10px; font-weight:500; }
+  section{ padding:64px 0 0; }
+  .tag{ display:inline-flex; align-items:baseline; gap:14px; background:var(--ink); color:var(--lime); padding:10px 18px 9px; }
+  .tag b{ font-weight:800; font-size:20px; letter-spacing:.16em; text-transform:uppercase; }
+  .tag span{ font-weight:500; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#f5f2ea; }
+  .tiles{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:18px; }
+  @media (max-width:700px){ .tiles{ grid-template-columns:1fr; } }
+  .tiles a{ display:block; overflow:hidden; background:#e7e3d8; text-decoration:none; color:inherit; }
+  .tiles img{ aspect-ratio:4/5; object-fit:cover; transition:transform .5s ease; }
+  .tiles a:hover img{ transform:scale(1.02); }
+  .tiles i{ display:block; font-style:normal; font-family:"JetBrains Mono"; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#6d7166; background:var(--paper); padding-top:8px; }
+  .wide{ margin-top:14px; }
+  footer{ padding:70px 0 36px; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d7166; }
+  @page{ size:1280px 860px; margin:0; }
+  @media print{
+    *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    header{ height:860px; display:flex; align-items:center; }
+    header h1{ font-size:150px; }
+    section{ break-before:page; padding-top:56px; }
+    .wide{ display:none; }
+    footer{ display:none; }
+  }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <small>Gym Junkie Café</small>
+  <h1>Gym Junkie Club<span>× NAW</span></h1>
+</div></header>
+
+<section><div class="wrap">
+  <div class="tag"><b>The club tee</b><span>Gym Junkie Club</span></div>
+  <div class="tiles">
+    <a href="img/front.jpg" target="_blank"><img src="img/front.jpg" alt="Front: Gym Junkie Café and NAW on the chest"><i>Front</i></a>
+    <a href="img/front-back.jpg" target="_blank"><img src="img/back.jpg" alt="Back: Gym Junkie Club print"><i>Back</i></a>
+    <a href="img/design.jpg" target="_blank"><img src="img/design.jpg" alt="Back design"><i>Design</i></a>
+  </div>
+  <a class="wide" href="img/front-back.jpg" target="_blank" style="display:block"><img src="img/front-back.jpg" alt="Front and back"></a>
+</div></section>
+
+<footer><div class="wrap">Design · Arturo Vicioso</div></footer>
+</body>
+</html>
