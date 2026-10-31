@@ -3,173 +3,95 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Run Junkies × NAW: the launch post and two run club shirt options for Gym Junkie Café. Proposal by Arturo Vicioso.">
+<meta name="description" content="Run Junkies × NAW: shirt options and launch post for Gym Junkie Café.">
 <meta property="og:title" content="Run Junkies × NAW · Proposal for Gym Junkie Café">
-<meta property="og:description" content="The launch post and two run club shirt options to choose from.">
-<meta property="og:image" content="https://arturovicav-debug.github.io/run-junkies/img/post.jpg">
+<meta property="og:description" content="Pick your shirt.">
+<meta property="og:image" content="https://arturovicav-debug.github.io/run-junkies/img/a-front-back.jpg">
 <title>Run Junkies × NAW · Proposal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;800&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;800&family=JetBrains+Mono:wght@400&display=swap">
 <style>
-  /* Proposal for Gym Junkie Café: the Run Junkies launch post and the shirt options. Palette from their logo (leaf green, lime) on warm white. */
-  :root{ --paper:#f5f2ea; --ink:#1d241a; --green:#4c7a31; --lime:#d6e898; --deep:#17201a; --muted:#5d6156; --line:rgba(29,36,26,.14); }
+  /* Proposal for Gym Junkie Café, image-led: each option is a label and its pictures. Palette from their logo (leaf green, lime). */
+  :root{ --paper:#f5f2ea; --ink:#1d241a; --lime:#d6e898; --deep:#17201a; --line:rgba(29,36,26,.14); }
   *{ box-sizing:border-box; margin:0; padding:0; }
-  body{ background:var(--paper); color:var(--ink); font-family:"Inter Tight", Helvetica, Arial, sans-serif; font-weight:300; font-size:17px; line-height:1.55; }
-  a{ color:inherit; }
+  body{ background:var(--paper); color:var(--ink); font-family:"Outfit", Helvetica, Arial, sans-serif; }
   img{ display:block; width:100%; }
   .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
-  @media (max-width:600px){ .wrap{ padding:0 18px; } }
-  .k{ display:block; font-family:"Outfit"; font-weight:500; font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:var(--green); }
-  h1,h2{ font-family:"Outfit"; font-weight:800; text-transform:uppercase; line-height:.9; letter-spacing:-.01em; }
-  h2{ font-size:clamp(38px,5.4vw,68px); margin-top:12px; }
-  h2 span{ color:var(--green); }
-  h3{ font-family:"Outfit"; font-weight:500; font-size:15px; letter-spacing:.24em; text-transform:uppercase; margin:46px 0 14px; }
-  .lead{ max-width:760px; margin-top:20px; font-size:19px; color:#363c32; }
-  figure{ margin:0; }
-  figcaption{ font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d7166; margin-top:9px; text-transform:uppercase; }
-  .frame{ display:block; overflow:hidden; background:#e7e3d8; }
+  @media (max-width:600px){ .wrap{ padding:0 16px; } }
+  a.frame{ display:block; overflow:hidden; background:#e7e3d8; }
   .frame img{ transition:transform .5s ease; }
   .frame:hover img{ transform:scale(1.015); }
 
-  header.hero{ background:var(--deep); color:var(--paper); padding:88px 0 92px; }
-  .hero .k{ color:var(--lime); }
-  .hero h1{ font-size:clamp(64px,10vw,136px); color:var(--lime); margin-top:18px; }
-  .hero h1 small{ display:block; font-size:.32em; letter-spacing:.14em; color:var(--paper); margin-top:16px; font-weight:500; }
-  .hero p{ margin-top:28px; font-size:20px; color:#cfd3c6; max-width:640px; }
-  .hero .meta{ margin-top:36px; display:flex; flex-wrap:wrap; gap:10px 28px; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.08em; color:#8f9686; text-transform:uppercase; }
-  .partners{ display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
-  .partners span{ border:1px solid rgba(214,232,152,.35); border-radius:30px; padding:7px 16px; font-family:"Outfit"; font-weight:500; font-size:13px; letter-spacing:.16em; text-transform:uppercase; color:var(--lime); }
+  header{ background:var(--deep); color:var(--lime); padding:64px 0 60px; }
+  header small{ display:block; font-weight:500; font-size:13px; letter-spacing:.3em; text-transform:uppercase; color:#aab39f; }
+  header h1{ font-weight:800; font-size:clamp(54px,9vw,120px); line-height:.9; text-transform:uppercase; margin-top:14px; }
+  header h1 span{ color:#f5f2ea; font-size:.4em; letter-spacing:.12em; display:block; margin-top:10px; font-weight:500; }
 
-  section{ padding:96px 0 30px; scroll-margin-top:20px; }
-  section + section{ border-top:1px solid var(--line); }
-  .two{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:28px; align-items:start; }
-  .post-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:center; margin-top:30px; }
-  @media (max-width:760px){ .two, .post-grid{ grid-template-columns:1fr; gap:26px; } }
-  .specs{ list-style:none; margin-top:24px; border-top:1px solid var(--line); }
-  .specs li{ display:flex; justify-content:space-between; gap:20px; padding:11px 0; border-bottom:1px solid var(--line); font-size:15px; }
-  .specs li b{ font-weight:500; flex:none; }
-  .specs li span{ color:var(--muted); text-align:right; }
-  @media (max-width:520px){ .specs li{ flex-direction:column; gap:2px; } .specs li span{ text-align:left; } }
-  .tag{ display:inline-block; background:var(--ink); color:var(--lime); font-family:"Outfit"; font-weight:800; font-size:14px; letter-spacing:.2em; padding:6px 12px; margin-bottom:6px; }
+  section{ padding:64px 0 8px; }
+  .tag{ display:inline-flex; align-items:baseline; gap:14px; background:var(--ink); color:var(--lime); padding:10px 18px 9px; margin-bottom:22px; }
+  .tag b{ font-weight:800; font-size:20px; letter-spacing:.16em; text-transform:uppercase; }
+  .tag span{ font-weight:500; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:#f5f2ea; }
+  @media (max-width:520px){ .tag{ flex-direction:column; gap:4px; } }
+  .two{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; align-items:start; }
+  .post{ max-width:560px; }
+  @media (max-width:700px){ .two{ grid-template-columns:1fr; } }
 
-  .choose{ background:var(--deep); color:var(--paper); padding:96px 0; margin-top:70px; }
-  .choose .k{ color:var(--lime); }
-  .choose h2 span{ color:var(--lime); }
-  .choose p{ color:#cfd3c6; max-width:620px; margin-top:18px; font-size:18px; }
-  .opts{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:36px; max-width:860px; }
-  @media (max-width:640px){ .opts{ grid-template-columns:1fr; } }
-  .opt{ display:flex; gap:16px; align-items:center; text-decoration:none; background:#202b22; border:1px solid rgba(214,232,152,.2); padding:14px; transition:border-color .2s, transform .2s; }
+  .choose{ background:var(--deep); color:var(--lime); padding:64px 0 70px; margin-top:64px; }
+  .choose h2{ font-weight:800; font-size:clamp(36px,5vw,60px); text-transform:uppercase; line-height:.95; }
+  .opts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:28px; }
+  .opt{ display:flex; gap:14px; align-items:center; text-decoration:none; background:#202b22; border:1px solid rgba(214,232,152,.2); padding:12px; transition:border-color .2s, transform .2s; }
   .opt:hover{ border-color:var(--lime); transform:translateY(-2px); }
-  .opt img{ width:84px; height:84px; object-fit:cover; flex:none; }
-  .opt b{ display:block; font-family:"Outfit"; font-weight:800; font-size:20px; letter-spacing:.04em; text-transform:uppercase; color:var(--lime); }
-  .opt span{ display:block; font-size:14px; color:#cfd3c6; margin-top:3px; }
-  footer{ padding:40px 0 50px; font-size:14px; color:var(--muted); }
+  .opt img{ width:76px; height:76px; object-fit:cover; flex:none; }
+  .opt b{ font-weight:800; font-size:19px; letter-spacing:.06em; text-transform:uppercase; color:var(--lime); }
+  footer{ padding:28px 0 36px; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d7166; }
 
-  /* PDF export: desktop layout on tall pages, colours kept, nothing split across a page break */
+  /* PDF export: desktop layout on tall pages, colours kept, one option per page */
   @page{ size:1280px 1810px; margin:0; }
   @media print{
     *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-    body{ background:var(--paper); }
-    #option-a, #option-b, .choose{ break-before:page; }
-    figure, .specs, .opt, .post-grid, .two, .blk{ break-inside:avoid; }
+    #option-a, #option-b, #option-c, .choose{ break-before:page; }
+    figure, .two, .opt{ break-inside:avoid; }
     .choose{ margin-top:0; }
-    .post-grid{ grid-template-columns:1.25fr .75fr; }
-    .frame:hover img{ transform:none; }
   }
 </style>
 </head>
 <body>
 
-<header class="hero"><div class="wrap">
-  <span class="k">Proposal for Gym Junkie Café</span>
-  <h1>Run Junkies<small>× NAW</small></h1>
-  <p>A Sunday run club that ends at Gym Junkie with a juice. Here is the post that launches it and two shirt options for the club, made by NAW. Have a look and pick the one you like.</p>
-  <div class="partners"><span>Gym Junkie Café</span><span>Studio 34</span><span>NAW</span></div>
-  <div class="meta"><span>Social run · Sundays 9:30</span><span>Marbella</span><span>Design · Arturo Vicioso</span></div>
+<header><div class="wrap">
+  <small>Proposal for Gym Junkie Café</small>
+  <h1>Run Junkies<span>× NAW</span></h1>
 </div></header>
 
-<!-- POST -->
-<section id="post"><div class="wrap">
-  <span class="k">01 · Instagram</span>
-  <h2>The launch <span>post.</span></h2>
-  <div class="post-grid">
-    <figure><a class="frame" href="img/post.jpg" target="_blank"><img src="img/post.jpg" alt="Run Junkies launch post"></a><figcaption>1080 × 1350 · feed post</figcaption></figure>
-    <div>
-      <p class="lead" style="margin-top:0">Five runners lean over the camera after the run, each one biting a lime wedge like a mouthguard. It is the club in one picture: sweat, friends and a fresh finish at Gym Junkie.</p>
-      <ul class="specs">
-        <li><b>Colour</b><span>The lime of the Gym Junkie logo</span></li>
-        <li><b>Top</b><span>Social run · 9:30 / Marbella</span></li>
-        <li><b>Partners</b><span>NAW · Studio 34 · Gym Junkie Café, on one line</span></li>
-        <li><b>Format</b><span>Instagram feed, 4:5</span></li>
-      </ul>
-    </div>
-  </div>
-</div></section>
-
-<!-- OPTION A -->
 <section id="option-a"><div class="wrap">
-  <span class="tag">Option A</span>
-  <h2>Sunday mornings are <span>the new Saturday nights.</span></h2>
-  <p class="lead">A white heavyweight tee in one brick red ink. On the back, one line across the shoulders: bold capitals and a handwritten finish that trade the Saturday night out for the Sunday morning run. On the front, the two brands side by side, as on Option B: Gym Junkie Café on the right chest and NAW on the left.</p>
-  <figure style="margin-top:28px"><a class="frame" href="img/a-front-back.jpg" target="_blank"><img src="img/a-front-back.jpg" alt="Option A tee, front and back"></a><figcaption>Front and back · white heavyweight</figcaption></figure>
+  <div class="tag"><b>Option A</b><span>Sunday mornings</span></div>
+  <a class="frame" href="img/a-front-back.jpg" target="_blank"><img src="img/a-front-back.jpg" alt="Option A, front and back"></a>
   <div class="two">
-    <figure><a class="frame" href="img/a-mockup.jpg" target="_blank"><img src="img/a-mockup.jpg" alt="Option A tee held up on a road by a pine forest, showing the back print"></a><figcaption>On the road · the back print</figcaption></figure>
-    <figure><a class="frame" href="img/a-artwork.jpg" target="_blank"><img src="img/a-artwork.jpg" alt="Option A back artwork in brick red"></a><figcaption>Back artwork · one ink, brick red</figcaption></figure>
+    <a class="frame" href="img/a-mockup.jpg" target="_blank"><img src="img/a-mockup.jpg" alt="Option A on the road"></a>
+    <a class="frame" href="img/a-artwork.jpg" target="_blank"><img src="img/a-artwork.jpg" alt="Option A back artwork"></a>
   </div>
-  <div class="blk">
-  <h3>The front</h3>
-  <figure><a class="frame" href="img/a-front-placement.jpg" target="_blank"><img src="img/a-front-placement.jpg" alt="Option A front: Gym Junkie Café 6 cm and NAW 9 cm, 12 cm either side of centre, 21 cm below the shoulder"></a><figcaption>Gym Junkie Café on the right chest, NAW on the left · real proportions</figcaption></figure>
-  </div>
-  <div class="blk">
-  <h3>The back</h3>
-  <figure><a class="frame" href="img/a-back-placement.jpg" target="_blank"><img src="img/a-back-placement.jpg" alt="Option A back: the phrase 28 cm wide, 8 cm below the neck"></a><figcaption>The phrase across the upper back · real proportions</figcaption></figure>
-  </div>
-  <ul class="specs">
-    <li><b>Shirt</b><span>Heavyweight cotton, white</span></li>
-    <li><b>Front, right chest</b><span>Gym Junkie Café, 6 cm wide</span></li>
-    <li><b>Front, left chest</b><span>NAW, 9 cm wide</span></li>
-    <li><b>Back</b><span>The phrase, 28 × 13.8 cm, 8 cm below the neck</span></li>
-    <li><b>Small print</b><span>Run Junkies × NAW · Marbella · 9:30</span></li>
-    <li><b>Ink</b><span>One colour, brick red, front and back</span></li>
-  </ul>
 </div></section>
 
-<!-- OPTION B -->
 <section id="option-b"><div class="wrap">
-  <span class="tag">Option B</span>
-  <h2>Sunday Run Club. <span>Marbella.</span></h2>
-  <p class="lead">An ecru tee with an old hotel luggage label on the back, in one deep blue ink. Inside the oval, an engraving of the Marbella promenade: a palm, an agave, the sea, La Concha and a runner. On the front, the two brands side by side: Gym Junkie Café on the right chest and NAW on the left.</p>
-  <figure style="margin-top:28px"><a class="frame" href="img/b-front-back.jpg" target="_blank"><img src="img/b-front-back.jpg" alt="Option B tee, front and back"></a><figcaption>Front and back · ecru heavyweight</figcaption></figure>
-  <div class="blk">
-  <h3>The front</h3>
-  <figure><a class="frame" href="img/b-front-placement.jpg" target="_blank"><img src="img/b-front-placement.jpg" alt="Front placement: Gym Junkie Café 6 cm and NAW 9 cm, 12 cm either side of centre, 21 cm below the shoulder"></a><figcaption>Gym Junkie Café on the right chest, NAW on the left · real proportions</figcaption></figure>
-  </div>
-  <div class="blk">
-  <h3>The back</h3>
-  <div class="two" style="margin-top:0;align-items:center">
-    <figure><a class="frame" href="img/b-back-artwork.jpg" target="_blank"><img src="img/b-back-artwork.jpg" alt="Option B back artwork: the oval label"></a><figcaption>Back artwork · one ink, deep blue</figcaption></figure>
-    <ul class="specs" style="margin-top:0">
-      <li><b>Shirt</b><span>Heavyweight cotton, ecru</span></li>
-      <li><b>Front, right chest</b><span>Gym Junkie Café, 6 cm wide</span></li>
-      <li><b>Front, left chest</b><span>NAW, 9 cm wide</span></li>
-      <li><b>Back</b><span>Oval label, 16.4 × 25 cm</span></li>
-      <li><b>Ink</b><span>One colour, deep blue, front and back</span></li>
-    </ul>
-  </div>
+  <div class="tag"><b>Option B</b><span>Sunday Run Club</span></div>
+  <a class="frame" href="img/b-front-back.jpg" target="_blank"><img src="img/b-front-back.jpg" alt="Option B, front and back"></a>
+  <div class="two">
+    <a class="frame" href="img/b-back-artwork.jpg" target="_blank"><img src="img/b-back-artwork.jpg" alt="Option B back artwork"></a>
   </div>
 </div></section>
 
-<!-- CHOOSE -->
+<section id="post"><div class="wrap">
+  <div class="tag"><b>Launch post</b><span>Instagram</span></div>
+  <a class="frame post" href="img/post.jpg" target="_blank"><img src="img/post.jpg" alt="Run Junkies launch post"></a>
+</div></section>
+
 <div class="choose" id="choose"><div class="wrap">
-  <span class="k">Your pick</span>
-  <h2>Which one <span>do you like?</span></h2>
-  <p>Tap your favourite and it opens an email with your choice. Colours, sizes and quantities can be adjusted once you have picked.</p>
+  <h2>Pick your shirt</h2>
   <div class="opts">
-    <a class="opt" href="mailto:arturo.vic.av@gmail.com?subject=Run%20Junkies%20%E2%80%94%20we%20pick%20Option%20A&body=Hi%20Arturo%2C%0A%0AWe%20pick%20Option%20A%20(Sunday%20mornings%20are%20the%20new%20Saturday%20nights).%0A%0A"><img src="img/a-mockup.jpg" alt=""><div><b>Option A</b><span>Sunday mornings are the new Saturday nights</span></div></a>
-    <a class="opt" href="mailto:arturo.vic.av@gmail.com?subject=Run%20Junkies%20%E2%80%94%20we%20pick%20Option%20B&body=Hi%20Arturo%2C%0A%0AWe%20pick%20Option%20B%20(Sunday%20Run%20Club%20%C2%B7%20Marbella).%0A%0A"><img src="img/b-back-artwork.jpg" alt="" style="object-position:50% 40%"><div><b>Option B</b><span>Sunday Run Club · Marbella</span></div></a>
+    <a class="opt" href="mailto:arturo.vic.av@gmail.com?subject=Run%20Junkies%20%E2%80%94%20we%20pick%20Option%20A"><img src="img/a-front-back.jpg" alt="" style="object-position:82% 30%"><b>Option A</b></a>
+    <a class="opt" href="mailto:arturo.vic.av@gmail.com?subject=Run%20Junkies%20%E2%80%94%20we%20pick%20Option%20B"><img src="img/b-back-artwork.jpg" alt="" style="object-position:50% 40%"><b>Option B</b></a>
   </div>
 </div></div>
 
-<footer><div class="wrap">Run Junkies × NAW · Proposal for Gym Junkie Café · Design Arturo Vicioso · arturo.vic.av@gmail.com · @arturo.vsl</div></footer>
+<footer><div class="wrap">Design · Arturo Vicioso · arturo.vic.av@gmail.com</div></footer>
 </body>
 </html>
