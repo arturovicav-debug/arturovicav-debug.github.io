@@ -40,13 +40,19 @@
   .post a{ display:block; }
   footer{ padding:70px 0 36px; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d7166; }
 
-  /* PDF export: desktop layout on tall pages, colours kept, one option per page */
-  @page{ size:1280px 1810px; margin:0; }
+  /* PDF export: landscape pages, a full-page cover, then one option (or one C variant) per page */
+  @page{ size:1280px 860px; margin:0; }
   @media print{
     *{ -webkit-print-color-adjust:exact; print-color-adjust:exact; }
-    #option-a, #option-b, #option-c, #c2, #post{ break-before:page; }
+    header{ height:860px; display:flex; align-items:center; }
+    header h1{ font-size:150px; }
+    section{ padding-top:56px; }
+    #option-a, #option-b, #option-c, #c2, #c3, #post{ break-before:page; }
+    #c2, #c3{ margin-top:0; padding-top:56px; }
     .tiles, .sub{ break-inside:avoid; }
     .sub{ break-after:avoid; }
+    .post{ max-width:520px; }
+    footer{ display:none; }
   }
 </style>
 </head>
@@ -92,7 +98,7 @@
     <a href="img/c2-design.jpg" target="_blank"><img src="img/c2-design.jpg" alt="Option C2 back design"><i>Design</i></a>
   </div>
 
-  <div class="sub">C3<span>Fresh Daily</span></div>
+  <div id="c3" class="sub">C3<span>Fresh Daily</span></div>
   <div class="tiles">
     <a href="img/c3-front.jpg" target="_blank"><img src="img/c3-front.jpg" alt="Option C3 front"><i>Front</i></a>
     <a href="img/c3-front-back.jpg" target="_blank"><img src="img/c3-back.jpg" alt="Option C3 back"><i>Back</i></a>
