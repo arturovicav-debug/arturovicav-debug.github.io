@@ -37,6 +37,13 @@
   .tiles a:hover img{ transform:scale(1.02); }
   .tiles i{ display:block; font-style:normal; font-family:"JetBrains Mono"; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#6d7166; background:var(--paper); padding-top:8px; }
   .post{ max-width:420px; margin-top:18px; }
+  .posts{ display:grid; grid-template-columns:repeat(5,1fr); gap:14px; margin-top:18px; }
+  @media (max-width:900px){ .posts{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:560px){ .posts{ grid-template-columns:1fr 1fr; } }
+  .posts a{ display:block; overflow:hidden; background:#e7e3d8; text-decoration:none; color:inherit; }
+  .posts img{ aspect-ratio:4/5; object-fit:cover; transition:transform .5s ease; }
+  .posts a:hover img{ transform:scale(1.02); }
+  .posts i{ display:block; font-style:normal; font-family:"JetBrains Mono"; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#6d7166; background:var(--paper); padding-top:8px; }
   .wide{ display:block; margin-top:14px; overflow:hidden; }
   .post a{ display:block; }
   footer{ padding:70px 0 36px; font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d7166; }
@@ -51,7 +58,7 @@
     #option-a, #option-b, #option-c, #post{ break-before:page; }
     .tiles, .sub{ break-inside:avoid; }
     .sub{ break-after:avoid; }
-    .post{ max-width:520px; }
+    .posts{ grid-template-columns:repeat(5,1fr); break-inside:avoid; }
     footer{ display:none; }
   }
 </style>
@@ -91,8 +98,14 @@
 </div></section>
 
 <section id="post"><div class="wrap">
-  <div class="tag"><b>Launch post</b><span>Instagram</span></div>
-  <div class="post"><a href="img/post.jpg" target="_blank"><img src="img/post.jpg" alt="Gym Junkie run club launch post"></a></div>
+  <div class="tag"><b>Launch post</b><span>Instagram · five versions</span></div>
+  <div class="posts">
+    <a href="img/post.jpg" target="_blank"><img src="img/post.jpg" alt="Launch post: the run club"><i>The run club</i></a>
+    <a href="img/post-breath.jpg" target="_blank"><img src="img/post-breath.jpg" alt="Launch post: the breath, underwater"><i>The breath</i></a>
+    <a href="img/post-flow.jpg" target="_blank"><img src="img/post-flow.jpg" alt="Launch post: the morning flow on the beach"><i>The morning flow</i></a>
+    <a href="img/post-pullup.jpg" target="_blank"><img src="img/post-pullup.jpg" alt="Launch post: a pull-up at 77"><i>Never off the move</i></a>
+    <a href="img/post-concha.jpg" target="_blank"><img src="img/post-concha.jpg" alt="Launch post: the climb up La Concha"><i>La Concha</i></a>
+  </div>
 </div></section>
 
 <footer><div class="wrap">Design · Arturo Vicioso · arturo.vic.av@gmail.com</div></footer>
