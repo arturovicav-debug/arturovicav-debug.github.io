@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="NAW Yoga · Instagram: las piezas para el perfil de NAW Women.">
+<meta property="og:title" content="NAW Yoga · Instagram">
+<meta property="og:image" content="https://arturovicav-debug.github.io/naw-instagram/img/women-triptych-2.jpg">
+<title>NAW Yoga · Instagram</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+  /* NAW Yoga · Instagram: the working page for the NAW Women profile (same look as the NAW page: black, bone, olive, gold). */
+  :root{ --ink:#141414; --bone:#f1efe9; --olive:#6b7a52; --gold:#c8a35a; --muted:#5b5b55; }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{ background:var(--bone); color:var(--ink); font-family:"Inter Tight", Helvetica, Arial, sans-serif; font-weight:300; font-size:17px; line-height:1.55; }
+  img{ display:block; width:100%; }
+  a{ color:inherit; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+  @media (max-width:600px){ .wrap{ padding:0 16px; } }
+
+  nav{ position:sticky; top:0; z-index:10; background:rgba(20,20,20,.94); backdrop-filter:blur(8px); }
+  nav .wrap{ display:flex; gap:26px; align-items:center; height:58px; overflow-x:auto; white-space:nowrap; }
+  nav img{ height:22px; width:auto; margin-right:8px; flex:none; }
+  nav a{ text-decoration:none; font-family:"Barlow Condensed"; font-weight:500; font-size:15px; letter-spacing:.24em; text-transform:uppercase; color:#bdbab2; }
+  nav a:hover{ color:#fff; }
+
+  header.hero{ background:var(--ink); color:var(--bone); padding:100px 0 84px; }
+  .k{ display:block; font-family:"Barlow Condensed"; font-weight:500; font-size:15px; letter-spacing:.3em; text-transform:uppercase; color:var(--olive); }
+  .hero .k{ color:var(--gold); }
+  .hero h1{ font-family:"Barlow Condensed"; font-weight:800; font-size:clamp(60px,10vw,140px); line-height:.86; text-transform:uppercase; margin-top:18px; }
+  .hero h1 span{ color:var(--olive); }
+  .hero p{ max-width:720px; margin-top:24px; font-size:19px; color:#c9c6be; }
+
+  section{ padding:88px 0 40px; scroll-margin-top:58px; }
+  h2{ font-family:"Barlow Condensed"; font-weight:800; font-size:clamp(44px,6vw,76px); line-height:.9; text-transform:uppercase; margin-top:12px; }
+  h2 span{ color:var(--olive); }
+  .lead{ max-width:840px; margin-top:20px; font-size:19px; color:#3a3a36; }
+  .note{ font-size:15px; color:var(--muted); margin-top:10px; }
+
+  .gal{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:26px; }
+  @media (max-width:900px){ .gal{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:560px){ .gal{ grid-template-columns:1fr; } }
+  .gal figure{ margin:0; }
+  .gal a{ display:block; overflow:hidden; background:#e2dfd6; }
+  .gal img{ transition:transform .5s ease; }
+  .gal a:hover img{ transform:scale(1.02); }
+  .gal figcaption{ font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d6b64; margin-top:8px; }
+  .gal figcaption a{ display:inline; background:none; text-decoration:underline; }
+
+  /* profile grid preview: three separate tiles in Instagram's 3:4 crop, 3 px apart, each one opens its own post */
+  .row3{ display:grid; grid-template-columns:repeat(3,1fr); gap:3px; max-width:760px; margin-top:36px; }
+  .row3 a{ display:block; overflow:hidden; background:#e2dfd6; }
+  .row3 img{ aspect-ratio:3/4; object-fit:cover; transition:transform .5s ease; }
+  .row3 a:hover img{ transform:scale(1.02); }
+
+  footer{ background:var(--ink); color:#9b988f; padding:50px 0; margin-top:80px; font-size:14px; }
+  footer img{ height:26px; width:auto; margin-bottom:14px; }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <img src="img/naw-logo-white.png" alt="NAW">
+  <a href="#fijadas">Fotos fijadas</a><a href="https://arturovicav-debug.github.io/naw/">Web de NAW</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="k">NAW Yoga · Instagram · NAW Women</span>
+  <h1>El perfil<br><span>de NAW.</span></h1>
+  <p>Las piezas para el Instagram de NAW Women, listas para subir. Aquí se irá añadiendo todo el contenido del perfil.</p>
+</div></header>
+
+<!-- FIJADAS -->
+<section id="fijadas"><div class="wrap">
+  <span class="k">01 · Las tres fotos fijadas</span>
+  <h2>Una foto. <span>Tres piezas.</span></h2>
+  <p class="lead">Una sola foto de la postura, cortada como un puzle: a la izquierda la mano en mudra, a la derecha la misma en espejo y en el centro el torso, en sombra, para mantener la intriga y enseñar poco el producto. Todo en blanco y negro, con el logo de NAW arriba en las tres piezas. Las piezas están medidas para que encajen justo en la cuadrícula del perfil.</p>
+  <div class="gal">
+    <figure><a href="img/women-triptych-1.jpg" target="_blank"><img src="img/women-triptych-1.jpg" alt="Pieza izquierda: la mano en mudra sobre la rodilla"></a><figcaption>1 · IZQUIERDA · LA MANO · <a href="files/NAW-TRIPTYCH_1_left.jpg" download>JPG</a></figcaption></figure>
+    <figure><a href="img/women-triptych-2.jpg" target="_blank"><img src="img/women-triptych-2.jpg" alt="Pieza central: el torso en sombra, con el logo de NAW"></a><figcaption>2 · CENTRO · EL TORSO EN SOMBRA · <a href="files/NAW-TRIPTYCH_2_centre.jpg" download>JPG</a></figcaption></figure>
+    <figure><a href="img/women-triptych-3.jpg" target="_blank"><img src="img/women-triptych-3.jpg" alt="Pieza derecha: la otra mano, en espejo"></a><figcaption>3 · DERECHA · LA OTRA MANO · <a href="files/NAW-TRIPTYCH_3_right.jpg" download>JPG</a></figcaption></figure>
+  </div>
+  <div class="row3">
+    <a href="img/women-triptych-1.jpg" target="_blank"><img src="img/women-triptych-1.jpg" alt="Pieza izquierda en la cuadrícula del perfil"></a>
+    <a href="img/women-triptych-2.jpg" target="_blank"><img src="img/women-triptych-2.jpg" alt="Pieza central en la cuadrícula del perfil"></a>
+    <a href="img/women-triptych-3.jpg" target="_blank"><img src="img/women-triptych-3.jpg" alt="Pieza derecha en la cuadrícula del perfil"></a>
+  </div>
+  <p class="note">Así se ven en el perfil (recorte 3:4 de la cuadrícula). Formato de cada post: 1080 × 1350. Se suben y se fijan en orden derecha, centro, izquierda, para que en el perfil se lean de izquierda a derecha.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <img src="img/naw-logo-white.png" alt="NAW">
+  Diseño · Arturo Vicioso
+</div></footer>
+</body>
+</html>
