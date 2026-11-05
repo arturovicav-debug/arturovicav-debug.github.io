@@ -48,6 +48,13 @@
   .gal a:hover img{ transform:scale(1.02); }
   .gal figcaption{ font-family:"JetBrains Mono"; font-size:12px; letter-spacing:.06em; color:#6d6b64; margin-top:8px; }
   .gal figcaption a{ display:inline; background:none; text-decoration:underline; }
+  /* four-slide carousel: four across on desktop, two on tablet and phone */
+  .gal.g4{ grid-template-columns:repeat(4,1fr); }
+  @media (max-width:900px){ .gal.g4{ grid-template-columns:repeat(2,1fr); } }
+
+  /* the Instagram caption, ready to copy */
+  .copy{ max-width:640px; margin-top:30px; background:#fff; border-left:3px solid var(--olive); padding:22px 26px; font-size:18px; color:#2a2a27; }
+  .copy .k{ margin-bottom:10px; }
 
   /* profile grid preview: three separate tiles in Instagram's 3:4 crop, 3 px apart, each one opens its own post */
   .row3{ display:grid; grid-template-columns:repeat(3,1fr); gap:3px; max-width:760px; margin-top:36px; }
@@ -63,7 +70,7 @@
 
 <nav><div class="wrap">
   <img src="../naw/img/naw-logo-white.png" alt="NAW">
-  <a href="#fijadas">Versión A</a><a href="#puzle">Versión B</a><a href="https://arturovicav-debug.github.io/naw/">Web de NAW</a>
+  <a href="#fijadas">Versión A</a><a href="#puzle">Versión B</a><a href="#la-carta">La carta</a><a href="https://arturovicav-debug.github.io/naw/">Web de NAW</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -106,6 +113,24 @@
     <a href="../naw/img/women-puzzle-3.jpg" target="_blank"><img src="../naw/img/women-puzzle-3.jpg" alt="Versión B, pieza derecha en la cuadrícula del perfil"></a>
   </div>
   <p class="note">Así se ven en el perfil. Se fijan en orden derecha, centro, izquierda, para que en el perfil se lean de izquierda a derecha.</p>
+</div></section>
+
+<!-- LA CARTA · CARRUSEL TEASER DEL COLOR MATCHA -->
+<section id="la-carta"><div class="wrap">
+  <span class="k">03 · Carrusel · La carta</span>
+  <h2>Uno de estos <span>es NAW.</span></h2>
+  <p class="lead">Un carrusel para ir deslizando, con cuatro bebidas de cafetería, todas en el mismo vaso y con la misma luz y el mismo encuadre. Solo una es el color de nuestro próximo drop: el iced matcha latte, en el mismo verde salvia lechoso del conjunto. Para que no destaque, va en tercera posición con el mismo tamaño y la misma luz que las demás. La pista está debajo del vaso: las otras bebidas se apoyan en un lino de su color, y el matcha, en un trozo doblado del tejido de NAW con la costura casi a la vista.</p>
+  <div class="gal g4">
+    <figure><a href="la-carta/NAW-LA-CARTA_01_oat-latte.jpg" target="_blank"><img src="la-carta/NAW-LA-CARTA_01_oat-latte.jpg" alt="Iced oat latte beige en un vaso alto sobre lino beige y mármol blanco" loading="lazy"></a><figcaption>01 · ICED OAT LATTE · <a href="la-carta/NAW-LA-CARTA_01_oat-latte.jpg" download>JPG</a></figcaption></figure>
+    <figure><a href="la-carta/NAW-LA-CARTA_02_strawberry-milk.jpg" target="_blank"><img src="la-carta/NAW-LA-CARTA_02_strawberry-milk.jpg" alt="Strawberry milk rosa empolvado en el mismo vaso sobre lino rosa" loading="lazy"></a><figcaption>02 · STRAWBERRY MILK · <a href="la-carta/NAW-LA-CARTA_02_strawberry-milk.jpg" download>JPG</a></figcaption></figure>
+    <figure><a href="la-carta/NAW-LA-CARTA_03_matcha.jpg" target="_blank"><img src="la-carta/NAW-LA-CARTA_03_matcha.jpg" alt="Iced matcha latte verde salvia en el mismo vaso sobre el tejido de NAW" loading="lazy"></a><figcaption>03 · ICED MATCHA LATTE · EL COLOR DEL DROP · <a href="la-carta/NAW-LA-CARTA_03_matcha.jpg" download>JPG</a></figcaption></figure>
+    <figure><a href="la-carta/NAW-LA-CARTA_04_ube-latte.jpg" target="_blank"><img src="la-carta/NAW-LA-CARTA_04_ube-latte.jpg" alt="Ube latte lila en el mismo vaso sobre lino lila" loading="lazy"></a><figcaption>04 · UBE LATTE · <a href="la-carta/NAW-LA-CARTA_04_ube-latte.jpg" download>JPG</a></figcaption></figure>
+  </div>
+  <div class="copy">
+    <span class="k">Texto del post</span>
+    Hemos pedido toda la carta. Solo uno de estos colores es nuestro próximo drop. ¿Cuál pedirías tú? Te leemos en comentarios.
+  </div>
+  <p class="note">Formato de cada slide: 1080 × 1350. Se suben en este orden, del 01 al 04. Imágenes generadas con ChatGPT.</p>
 </div></section>
 
 <footer><div class="wrap">
